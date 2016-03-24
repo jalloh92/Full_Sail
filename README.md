@@ -24,3 +24,7 @@ Private repo for Full Sail Assignments
 ## [Web Standards Project](https://github.com/karhodes/private/tree/master/201503_WSP)
 * March 2015
 * Introduction to Sass / Bourbon, GH Pages, Compass, Mix-ins
+
+## [Design Patterns for Web Programming](https://github.com/karhodes/private/tree/master/201505_DWP)
+* May 2015
+* Object-Orientated Programming using Python
