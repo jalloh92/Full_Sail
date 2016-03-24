@@ -1,0 +1,8 @@
+- name: Barbakoa Caesar Salad
+  description: "Tossed Fresh Romaine Lettuce & Baby Kale, Barbakoa Croutons, Roasted Peppers, Percorino and Romano Cheeses.  Made with raw eggs."
+  price: "$5.99"
+
+- name: The Skinny Sow
+  description: "Tossed Fresh Field Greens, Spiced Walnuts, Green Apples, Roasted Beets, Shaved Fennel, Goat Cheese Watermelon Radish and Apple Cider Vinaigrette."
+  price: "$7.99"
+  

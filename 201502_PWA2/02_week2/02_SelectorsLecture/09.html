@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="UTF-8">	
+<title>Day 2 Demo</title>
+<style type="text/css">
+	.hilite {
+		background-color: #999;
+	}
+	
+	 .visbox {
+		width: 50px;
+		height: 40px;
+		margin: 5px;
+		border: 3px outset green;
+		float: left;
+	}
+	
+	.starthidden {
+		display: none;
+	}
+</style>
+</head>
+
+<body>
+
+
+<!---Demo 9 ---->  
+<!--Visible Selector -->
+<button>Show Hidden Box</button>
+<div class="visbox"></div>
+<div class="starthidden"></div>
+<div class="visbox" style="display:none;"></div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+ 	<script>
+ 		
+ 	$(".visbox:visible").click(function(){
+		$(this).css("background-color", "yellow");
+
+ 	})
+
+ 	$("button").click(function(){
+ 		$(".visbox:hidden").fadeIn("slow");
+ 		$(".starthidden").fadeIn("slow");
+ 		$(".starthidden").css("border", "1px solid red");
+ 	})
+
+
+
+	</script>
+
+</body>
+</html>

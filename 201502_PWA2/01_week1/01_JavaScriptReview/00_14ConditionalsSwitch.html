@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Switch Statement</title>
+<body>
+
+<p> Use the switch condition to change display the correct date.</p>
+
+<p>Click the button to display what day it is today:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+</body>
+
+<script>
+
+	function myFunction() {
+    	var day;
+
+		switch (new Date().getDay()) {
+		    case 0:
+		        day = "Sunday";
+		        break;
+		    case 1:
+		        day = "Monday";
+		        break;
+		    case 2:
+		        day = "Tuesday";
+		        break;
+		    case 3:
+		        day = "Wednesday";
+		        break;
+		    case 4:
+		        day = "Thursday";
+		        break;
+		    case 5:
+		        day = "Friday";
+		        break;
+		    case 6:
+		        day = "Saturday";
+		        break;
+		}
+		document.getElementById("demo").innerHTML = "Today is " + day;
+	}
+
+</script>
+
+
+
+</html>

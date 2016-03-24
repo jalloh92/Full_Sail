@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Doc - .ready( handler )</title>
+<style>
+  p {
+color: red;
+}
+</style>
+</head>
+
+<body>
+<!----Instructions-->
+<!--Display a message when the DOM is loaded using .ready method and the .text method. -->
+<p>.ready( handler )
+<br><br>
+~handler<br>
+  Type: Function()<br>
+  A function to execute after the DOM is ready.
+  <br><br>
+Syntax <br>
+Two syntaxes can be used:  <br>
+$(document).ready(function)
+ <br>or <br>
+$(function)
+</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+	$('p').text('ready!');
+});
+
+</script>
+
+
+
+</body>
+</html>

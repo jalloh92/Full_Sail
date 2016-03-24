@@ -1,0 +1,16 @@
+- name: Pork Belly Tacos
+  description: "Oakwood Smoked & Grilled Prok Belly, Asian Dragon Sauce, Citrus Peanut Slaw served on a Warm Tortilla"
+  price: $3.49 each
+
+- name: Chicken Al Pastor Tacos
+  description: "Yoghurt Marinated Grilled Chicken, Watermelon Radish, Cilantro, Queso Fresco and Charred Pineaplle Salsa served on a Warm Tortilla"
+  price: $2.95 each
+
+- name: Butter Chicken Tacos
+  description: "Spiced Chicken Tikka, Pepitas, Jalapenos, Cilantro, Greek Yoghurt and Jasmine Rice served on a Warm Tortilla"
+  price: $2.95 each 
+
+- name: "Shrimp & Sausage Tacos"
+  description: "Spice Rubbed Shrimp, North African Chicken Sausage, Mandarin Orange Sambal, Greek Yoghurt, Mint and Toasted Almonds served on a Warm Tortilla"
+  price: $3.79 each     
+  

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<title></title>
+
+
+</head>
+<body>
+
+<div id="container">
+
+<script id="some-template" type="text/x-handlebars-template">
+  <table>
+    <thead>
+      <th>Username</th>
+      <th>Name</th>
+      <th>Email</th>
+    </thead>
+    <tbody>
+      {{#users}}
+        <tr>
+          <td>{{username}}</td>
+          <td>{{firstName}} {{lastName}}</td>
+          <td>{{email}}</td>
+        </tr>
+      {{/users}}
+    </tbody>
+  </table>
+</script><!--closes entry template-->
+</div><!--Closes Container-->
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
+<script type="text/javascript" src="js/08_01templates.js"></script>
+
+
+</body>
+</html> 

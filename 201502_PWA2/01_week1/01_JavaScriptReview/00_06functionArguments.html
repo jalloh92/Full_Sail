@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+</head> 
+
+<body> 
+<p>
+When you click on one of the buttons, a function will be called. The function will display the argument that is passed to it.
+</p>
+
+<form> 
+<input type="button" onclick="myfunction('Good Morning!')" value="In the Morning"> 
+<input type="button" onclick="myfunction('Good Evening!')" value="In the Evening"> 
+</form> 
+
+<p id="demo"></p>
+
+<script>
+   function myfunction(arg){
+   	
+    document.querySelector("#demo").innerHTML = arg; 
+    
+  };
+
+</script>
+
+</body> 
+</html> 

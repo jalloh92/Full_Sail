@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DOM Removal .empty</title>
+</head>
+
+<body>
+<p>.empty()<br>
+Description: Remove all child nodes of the set of matched elements from the DOM.
+This method does not accept any arguments.<br><br>
+Syntax<br>
+$(selector).empty()
+</p>
+
+<!----Instructions-->
+<!--Remove all child nodes (including text nodes) from all paragraphs when you click the button -->
+<p>
+Hello, <span>Person</span> <em>and person</em>.
+</p>
+<button>Call empty() on above paragraph</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+(function($){ // Global Document Ready Function
+
+	$('button').click(function(){
+		$('p').empty();
+	});
+
+})(jQuery); // end private scope	
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>":visible" demo</title>
+<style>
+ div {
+	width: 50px;
+	height: 40px;
+	margin: 5px;
+	border: 3px outset pink;
+	float: left;
+ }
+ 
+.hidden {
+  display: none;
+}
+
+</style>
+</head>
+
+<body>
+<h1>visible Filter</h1>
+
+<!----Instructions-->
+<!--Make all hidden divs visible on click.-->
+
+<button>Show hidden to see they don't change</button>
+<div></div>
+<div class="hidden"></div>
+<div></div>
+<div></div>
+<div style="display:none;"></div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+	   
+   	$("button").click(function() {
+	   	$( "div:hidden" ).show(  );
+		
+	});	
+   
+   </script>
+</body>
+</html>

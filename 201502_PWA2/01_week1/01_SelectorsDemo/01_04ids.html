@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ID Selector</title>
+ <style>
+   div {
+	  width: 90px;
+	  height: 90px;
+	  float: left;
+	  padding: 5px;
+	  margin: 5px;
+	  background-color: #eee;
+	}
+  </style>
+</head>
+
+<!--ID Selector-->
+<!----Instructions-->
+<!--Use the selector as id "awesomediv" and give it a orange dotted 5px border. Note: Use the css method-->
+
+<body>
+  <div id="myclass"><p>This is a paragraph</p></div>
+  <div id="awesomediv">This is a div</div>
+  
+  
+  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+	   
+   	$(document).ready(function() {
+	   $('#awesomediv').css({"border": "5px dotted orange"});
+			
+	});	
+   </script>
+
+</body>
+</html>

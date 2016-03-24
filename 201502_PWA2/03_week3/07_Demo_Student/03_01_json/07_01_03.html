@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<h1>Data inside an HTML element</h1>
+
+<div id="placeholder"></div>
+
+<script>
+  var data={
+    "firstName":"Crystal",
+    "lastName":"Silvestro",
+    "course": "PWA2"
+  };
+  
+	document.getElementById("placeholder").innerHTML=data.firstName + " " + data.lastName + " " + data.course;
+
+</script>
+
+</body>
+</html>

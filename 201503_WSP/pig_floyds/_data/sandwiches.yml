@@ -1,0 +1,24 @@
+- name: The Big Floyd
+  description: "Oakwood Smoked Brisket, Sliced Chicken Sausage, Housemade Sweet BBQ Sauce, Citrus Peanut Slaw and French Fries served on a Toasted Sub Roll"
+  price: "$8.79"
+
+- name: Mills 50 Cheesesteak
+  description: "Oakwood Smoked Brisket, Housemade Pimento Cheese, Caramelized Onions and Grilled Cubanelle Peppers served on a Toasted Sub Roll.  Gluten Free."
+  price: "$8.99"
+
+- name: Matahambre AKA Hunger Killer
+  description: "Oakwood Smoked Brisket, Chimichurri, Mayo, Grilled Tomatoes, Pickled Carrots, Greens and Over Easy Egg served on a Grilled Sub Roll.  Gluten Free."
+  price: "$8.99" 
+
+- name: Barbakoa Banh Mi
+  description: "Oakwood Smoked Pulled Pork, Lucky Dragon Sauce, Ginger-Garlic Aioli, Pickled Vegetables, Jalapenos and Cilantro on a Fresh Sub Roll."
+  price: "$7.99" 
+
+- name: Plain Jane Barbakoa (Oakwood Smoked Pulled-Pork with Apple Fennel Slaw)
+  description: Served with your choice of a Sauce on a Coconut Pinapple Roll
+  price: "$7.99" 
+
+- name: Plain Jane Barbakoa (Sliced Brisket)
+  description: Served with your choice of a Sauce on a Coconut Pinapple Roll
+  price: "$8.49"   
+  

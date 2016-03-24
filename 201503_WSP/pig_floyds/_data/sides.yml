@@ -1,0 +1,20 @@
+- name: "Cuban Black Beans & Rice"
+  price: "$1.95"
+
+- name: Fried Plantains (Ripe)
+  price: "$1.95"
+
+- name: Fried Yuca with Fancy Sauce
+  price: "$1.95"  
+
+- name: Grilled Corn on the Cob
+  price: "$1.95"  
+
+- name: French Fries
+  price: "$1.95"  
+
+- name: Apple Fennel Slaw
+  price: "$1.95"  
+
+- name: Grilled Seasonal Vegetables
+  price: "$1.95"  

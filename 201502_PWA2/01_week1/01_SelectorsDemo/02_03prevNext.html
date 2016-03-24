@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>( &quot;prev + next&quot; )</title>
+</head>
+
+
+<!----Instructions
+Using the 'prev + next' selector:
+1. Find all inputs that are next to a label
+2. Change all of their font colors to blue.  Note: Use the css method -->
+
+<body>
+
+  <form>
+    <label for="name">Name:</label>
+    <input name="name" id="name">
+      <fieldset>
+        <label for="newsletter">Newsletter:</label>
+        <input name="newsletter" id="newsletter">
+      </fieldset>
+  </form>
+  <input name="none">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <script>
+     
+    $(document).ready(function() {
+     $('label + input').css({"color": "blue"});
+      
+  }); 
+  </script>
+
+</body>
+</html>

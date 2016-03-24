@@ -1,0 +1,21 @@
+div {
+	border:green; 
+	display:inline-block; 
+	margin:10px; 
+}
+p {
+	background-color: white; 
+  	margin:0px; 
+	padding:3px; 
+	text-align:center; 
+}
+
+img { 
+	height:130px; 
+	vertical-align:top;  
+}
+
+#images { 
+	background-color:black; 
+	padding:20px; 
+}

@@ -1,0 +1,41 @@
+ <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DOM Replacement .replaceAll</title>
+</head>
+
+<body>
+<p>
+.replaceAll( target )<br>
+~target<br>
+  Type: Selector or jQuery or Array or Element<br>
+  A selector string, jQuery object, DOM element, or array of elements indicating which element(s) to replace.<br><br>
+  Syntax<br>
+  $(content).replaceAll(selector)
+</p>
+<!----Instructions-->
+<!--Replace all <p> elements with <h2> elements when you click the button-->
+<p>Hello</p>
+<p>cruel</p>
+<p>World</p>
+<button>Replace</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+(function($){ // Global Document Ready Function
+
+	$('button').click(function(){
+
+		$('p').replaceWith('<h2>Whats up?</h2>');
+	});
+
+	
+
+})(jQuery); // end private scope	
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>:last-child demo</title>
+<style>
+ span.solast {
+text-decoration: line-through;
+}
+
+</style>
+</head>
+
+<body>
+<h1>$( ":last-child" )</h1>
+Selects all elements that are the last child of their parent.
+<!----Instructions-->
+<!--Find the last span in each div and add the following css (color-red, fontSize-80%) 
+	Add a hover state with a class of "solast".-->
+<div>
+<span>John,</span>
+<span>Karl,</span>
+<span>Brandon,</span>
+<span>Sam</span>
+</div>
+<div>
+<span>Glen,</span>
+<span>Tane,</span>
+<span>Ralph,</span>
+<span>David</span>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+
+	$( "div span:last-child" ) // grabs the last (span) child of each div
+  .css( {color: "red" , fontSize : "80%"}) // adds the css to underline
+  .hover(function() { // adds the hover state when active mygreen is added & when not active mygreen is removed
+    $( this ).addClass( "solast" );
+  }, function() {
+    $( this ).removeClass( "solast" );
+  });
+
+
+   </script>
+</body>
+</html>

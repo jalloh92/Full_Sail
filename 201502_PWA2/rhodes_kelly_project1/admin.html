@@ -1,0 +1,135 @@
+<!doctype html>  
+
+<!--
+	This is the admin / dashboard page of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>My Dashboard</title>
+	<meta name="description" content="Resources for the Newly Single">
+	<meta name="author" content="Kelly Rhodes">
+
+	<link rel="shortcut icon" href="images/newleaf_logo_50.png">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.theme.min.css">
+	<!-- end CSS-->
+	
+</head>
+
+<!-- ========================================================= -->
+
+<body>
+
+	<!-- ========================================================= -->
+
+	<div header class="nav_bar login">
+			<div class="inner">
+				<div id="logo">
+					<a href="index.html">
+						<img src="images/newleaf_logo_50.png" alt="logo"/>
+						<img src="images/newleaf_name_50.png" alt="logo"/>
+					</a>
+				</div><!-- closes logo -->
+
+				<div id="logout">
+					<div class="userid">
+						<p>Welcome, User:</p>
+					</div><!-- closes userid -->
+
+					<div class = "logoutbox">	
+						<input id="dashboard" name="dashboard" type="button" class="dboardbtn masterTooltip" title="Click here for your dashboard" value="Dashboard" />
+						<input id="profile" name="profile" type="button" class="profilebtn masterTooltip" title="Click here for your profile" value="Profile" />
+						<input id="logOut" name="logOut" type="button" class="logoutbtn masterTooltip" title="Click here to log out" value="Log Out" />
+					</div><!-- closes logout box-->	
+				</div><!-- closes logout -->
+			
+			</div><!-- closes inner -->	
+		</div><!-- closes header (nav_bar / login) -->
+
+
+		<!-- ========================================================= -->
+	<div class="container wrapper">
+		<div>
+			<h1>Welcome!</h1>
+			<p>This is your dashboard area.  Please choose one of the following options.</p>
+		</div>
+
+		<br>
+		<br>
+
+		<!-- ========================================================= -->
+		<img id="admin_logo" src="images/newleaf_logo_100.png" alt="Resources Logo"/>
+		<div>
+			<ul id="tabs-nav">
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#tasks">Tasks</a></li>
+				<li><a href="#users">Users</a></li>
+			</ul>
+			
+			<div id="tabs">
+				<p id="projects">By defining projects, you can keep all that you need to do organized.				
+						<br>
+						<br>
+						Go to my projects...
+						<button class="projectsbtn">Projects</button>
+				</p>
+
+				<p id="tasks">Tasks are the steps needed to complete a project.					
+						<br>
+						<br>
+						Go to my tasks...
+						<button class="tasksbtn">Tasks</button>
+				</p>
+
+				<p id="users">You can give those helping you access to your account to help you with managing your projects and tasks.						<br>
+						<br>
+						Go to my users...
+						<button class="usersbtn">Users</button>
+				</p>	
+		
+			</div><!-- closes tabs -->
+
+		</div><!-- closes accordian content -->	
+		<br>
+		<br>
+
+
+	</div><!-- closes container ->	
+
+	<!-- ========================================================= -->
+	
+	<footer>
+		<p>&copy; 2015 Kelly Rhodes</p>
+	</footer>	
+
+	<!-- ========================================================= -->
+	
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jQuery-1.11.2-min.js"></script>
+	<!-- plugins -->
+	<script type="text/javascript" src="js/plugins/jquery-ui-custom/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery-validation-1/dist/jquery.validate.js"></script>
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>

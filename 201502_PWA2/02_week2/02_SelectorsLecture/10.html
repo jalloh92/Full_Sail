@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta charset="UTF-8">	
+<title>Day 2 Demo</title>
+<style>
+	.textbox {
+	width: 30%;
+	border: medium groove #000;
+	}
+</style>
+</head>
+
+<body>
+
+<!---Demo 10 ---->  
+<!--Text Selector -->
+<div class="textbox">Click here in this div</div>
+<p></p>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+ 	<script>
+ 		$(function(){
+ 			$(".textbox").click(function(){
+ 				$("p").html("Text goes here!");
+ 			})
+ 		});
+	</script>
+
+
+</body>
+</html>

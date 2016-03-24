@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Parent &gt; Child demo</title>
+</head>
+
+<!--$( "parent > child" )-->
+<!--Instructions-->
+<!--Using the "parent > child" selector, place a 3px double orange border around all list items that are the children of the ul.mynav Note: Use the css method-->
+
+<body>
+  <nav>
+    <ul class="mynav">
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+          <li>Nested item 1</li>
+          <li>Nested item 2</li>
+          <li>Nested item 3</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+    </ul>
+  </nav>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <script>
+     
+    $(document).ready(function() {
+     $('ul.mynav > li').css({"border": "3px double orange"});
+      
+  }); 
+  </script>
+
+</body>
+</html>

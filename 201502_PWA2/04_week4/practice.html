@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Doc - .ready( handler )</title>
+<style>
+  	div {
+		background-color: red;
+	}
+</style>
+</head>
+
+<body>
+<!-- Instructions-->
+<button>Alert!</button>
+<div>Project has been deleted!</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$('div').hide();
+
+	$('button').click(function(){
+		$('div').slideDown(1000).slideUp(1000);
+
+
+
+	});
+
+});
+
+</script>
+
+
+
+</body>
+</html>

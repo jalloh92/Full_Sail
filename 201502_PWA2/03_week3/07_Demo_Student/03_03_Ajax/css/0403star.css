@@ -1,0 +1,56 @@
+div { 
+	margin:0px; 
+	display:inline-block; 
+	float:left; 
+	text-align:center; 
+}
+
+span { 
+	color:black; 
+	font-size:20px; 
+	float:left; 
+	cursor:pointer; 
+	width:150px; 
+	text-align:center; 
+	border-bottom:3px ridge; 
+}
+
+p { 
+	margin:0px; 
+}
+
+
+#title { 
+	font-weight:bold; 
+	font-size:32px; 
+ }
+
+#leftNav {
+	width:150px; 
+	height:400px; 
+	font-size:20px; 
+	background-color:#AACCFF; 
+	
+}
+
+#content { 
+	height:400px; 
+	width: 400px; 
+	background-color:#EEEEEE; 
+}
+
+#photo { 
+	margin:20px;
+ 	border:5px solid white; 
+ 	box-shadow: 2px 2px 5px #888888; 
+}
+
+#date { 
+	color:red; 
+	font-style:italic; 
+	font-size:24px; 
+}
+
+#info, label { 
+	font-size:24px; 
+} 

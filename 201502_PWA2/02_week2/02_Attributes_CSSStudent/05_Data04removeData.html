@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery.removeData demo</title>
+<style>
+div {
+margin: 2px;
+color: blue;
+}
+span {
+color: red;
+}
+</style>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+Set a data store for 2 names then remove one of them.
+<div>value1 before creation: <span></span></div>
+<div>value1 after creation: <span></span></div>
+<div>value1 after removal: <span></span></div>
+<div>value2 after removal: <span></span></div>
+
+<button id="btn1">Attach data to div element</button><br>
+<button id="btn2">Remove data attached to div element</button>
+
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script>
+var div = $( "div" )[ 0 ];
+$( "span:eq(0)" ).text( "" + $( "div" ).data( "test1" ) );
+jQuery.data( div, "test1", "VALUE-1" );
+jQuery.data( div, "test2", "VALUE-2" );
+$( "span:eq(1)" ).text( "" + jQuery.data( div, "test1" ) );
+jQuery.removeData( div, "test1" );
+$( "span:eq(2)" ).text( "" + jQuery.data( div, "test1" ) );
+$( "span:eq(3)" ).text( "" + jQuery.data( div, "test2" ) );
+</script>
+
+
+<script>
+$("#btn1").click(function(){
+    $("div").data("greeting", "Hello World");
+    alert("Greeting is: " + $("div").data("greeting"));
+  });
+  $("#btn2").click(function(){
+    $("div").removeData("greeting");
+    alert("Greeting is: " + $("div").data("greeting"));
+  });
+</script>
+</body>
+</html>

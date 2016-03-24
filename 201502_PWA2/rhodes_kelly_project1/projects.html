@@ -1,0 +1,171 @@
+<!doctype html>  
+
+<!--
+	This is the projects page of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>My Projects</title>
+	<meta name="description" content="Resources for the Newly Single">
+	<meta name="author" content="Kelly Rhodes">
+
+	<link rel="shortcut icon" href="images/newleaf_logo_50.png">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.theme.min.css">
+	<!-- end CSS-->
+	
+</head>
+
+<!-- ========================================================= -->
+
+<body>
+
+	<div header class="nav_bar login">
+			<div class="inner">
+				<div id="logo">
+					<a href="index.html">
+						<img src="images/newleaf_logo_50.png" alt="logo"/>
+						<img src="images/newleaf_name_50.png" alt="logo"/>
+					</a>	
+				</div><!-- closes logo -->
+
+				<div id="logout">
+					<div class="userid">
+						<p>Welcome, User:</p>
+					</div><!-- closes userid -->
+
+					<div class = "logoutbox">	
+						<input id="dashboard" name="dashboard" type="button" class="dboardbtn masterTooltip" title="Click here for your dashboard" value="Dashboard" />
+						<input id="profile" name="profile" type="button" class="profilebtn masterTooltip" title="Click here for your profile" value="Profile" />
+						<input id="logOut" name="logOut" type="button" class="logoutbtn masterTooltip" title="Click here to log out" value="Log Out" />
+					</div><!-- closes logout box-->	
+				</div><!-- closes logout -->
+
+			</div><!-- closes inner -->	
+		</div><!-- header (closes nav_bar / login) -->
+
+<!-- ========================================================= -->
+
+	<div class="container wrapper">
+		<div class ="welcome">
+			<button class="modalClick masterTooltip" title="Click here to start a new project" id="addProjBtn">New Project</button>
+		</div><!-- closes welcome -->
+
+	<!-- ========================================================= -->
+
+		<div id="projectslist">
+			<h1>My Current Projects</h1>
+
+			<div class="projects" id="sortable"><!-- holder for the info from the database -->
+
+			</div><!-- closes projects-->
+
+		</div><!-- closes projects list -->
+
+	<!-- ========================================================= -->
+
+		<!-- need to fix button on modal -->
+		<div id ="overlay">
+			<div id="modal">
+
+				<span class="close">X</span>
+				<h3 class="header">New Project</h3>
+				<div id="add">
+
+					<form id="addForm">
+
+						<div class="item">
+							<label>Project Name:</label> 
+							<input name="projectName" type="text" id="projectName" title="Please enter a project name" class="masterTooltip"/>
+						</div>
+						
+						
+						<div class="item">
+							<label>Project Description:</label>
+							<input name="projectDesc" type="text" id="projectDesc" title="Please enter a project description" class="masterTooltip"/>
+						</div>
+						
+
+						<div class="item">
+							<label>Project Due Date:</label>
+							<input name="projectDueDate" type="text" id="projectDueDate" class="mydatepicker" title="Please enter a project due date" class="masterTooltip"/>
+						</div>
+						
+						<!-- include radio buttons (icons) for urgent, normal, delayed & completed (will need hover effect) -->
+						<label for="status">Select status:</label>
+						<div id="icon_box">
+							<label class="mystatus">
+								<input type="radio" name="status" id="urgent"><img src="images/urgent_100.png" alt="Urgent" title="Urgent" class="masterTooltip"/></label>
+							</label>
+
+							<label class="mystatus">
+								<input type="radio" name="status" id="normal"><img src="images/normal_100.png" alt="Normal" title="Normal" class="masterTooltip"/></label>
+							</label>
+
+							<label class="mystatus">
+								<input type="radio" name="status" id="delayed"><img src="images/delayed_100.png" alt="Delayed" title="Delayed" class="masterTooltip"/></label>
+							</label>
+
+							<label class="mystatus">
+								<input type="radio" name="status" id="complete"><img src="images/completed_100.png" alt="Completed" title="Completed" class="masterTooltip"/></label>
+							</label>	
+						</div><!-- closes icon box -->
+						<br>
+
+						<button id="noFun" name="addButton" class="addButton">Add Project</button>
+					
+					</form><!-- closes addForm form -->
+
+				</div><!-- closes add -->
+
+			</div><!-- closes modal -->
+		</div><!-- closes overlay -->
+
+	</div><!-- end container -->
+
+	<!-- ========================================================= -->
+
+	<div id="dialog-confirm" title="Delete this project?">
+	  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>This project will be permanently deleted and cannot be recovered. Are you sure?</p>
+	</div>
+
+
+	<!-- ========================================================= -->
+
+	<footer>
+		<p>&copy; 2015 Kelly Rhodes</p>
+	</footer>
+			
+	<!-- ========================================================= -->
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jQuery-1.11.2-min.js"></script>
+	
+	<!-- plugins -->
+	<script type="text/javascript" src="js/plugins/jquery-ui-custom/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery-validation-1/dist/jquery.validate.js"></script>
+
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>

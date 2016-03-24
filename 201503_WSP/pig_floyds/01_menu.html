@@ -1,0 +1,124 @@
+---
+layout: default
+title: Menu
+
+---
+
+<h1>MENU</h1>
+
+	<div id="col_left">
+
+		<!-- ************ SANDWICHES ************* -->
+		<h2 class="menu_title">Signature Sandwiches</h2>
+		<ul>
+			<li>Served with Fries</li>
+			<li>Substitute tofu for any meat item at no charge</li>
+			<li>Gluten free with the removal of the bread</li>
+		</ul>
+
+		<div class="menu_group">
+			{% for member in site.data.sandwiches %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+		<!-- ************ TACOS ************* -->
+		<h2 class="menu_title">Specialty Tacos</h2>
+		<ul>
+			<li>Substitue tofu for any meat item at no charge</li>
+			<li>Gluten free with the removal of the tortilla</li>
+		</ul>
+
+		<div class="menu_group">
+			{% for member in site.data.tacos %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+		<!-- ************ SALADS ************* -->
+		<h2 class="menu_title">Salads</h2>
+		<ul>
+			<li>Handmade dressings selection:  Caesar, Apple Cider Vinaigrette and Creamy Ranch</li>
+			<li>Ask about gluten-free substitutions</li>
+			<li>Add Oakwood Smoked Pulled Pork or Brisket:  $4.25</li>
+			<li>Add Grilled Chicken:  $2.99</li>
+			<li>Add Grilled Shrimp or Sausage:  $3.99</li>
+		</ul>	
+
+		<div class="menu_group">
+			{% for member in site.data.salads %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+	</div><!-- end col_left -->
+	
+	<div id="col_right">	
+
+		<!-- ************ MEAT PLATTERS ************* -->
+		<h2 class="menu_title">Barbakoa Meat Platters</h2>
+		<ul>
+			<li>8 oz of meat served with your choice of 2 sides and tortillas</li>
+			<li>Substitue tofu for any meat iteam at no charge</li>
+			<li>Ask about gluten-free substitutions</li>
+		</ul>	
+
+		<div class="menu_group">
+			{% for member in site.data.barbakoa %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+		<!-- ************ SIDES ************* -->
+		<h2 class="menu_title">Sides</h2>
+
+		<div class="menu_group">
+			{% for member in site.data.sides %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+		<!-- ************ SAUCES ************* -->
+		<h2 class="menu_title">Sauces</h2>
+
+		<div class="menu_group">
+			{% for member in site.data.sauces %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+		<!-- ************ DESERTS ************* -->
+		<h2 class="menu_title">Sweet Side</h2>
+
+		<div class="menu_group">
+			{% for member in site.data.deserts %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+		<!-- ************ DRINKS ************* -->
+		<h2 class="menu_title">Beverages</h2>
+
+		<div class="menu_group">
+			{% for member in site.data.beverages %}
+				<p class="menu_item_name">{{ member.name }}</p>
+				<p class="menu_item_price">{{ member.price }}</p>
+				<p class="menu_item_description">{{ member.description }}</p>
+			{% endfor %}
+		</div><!-- end menu_group -->
+
+	</div><!--end col_right -->	

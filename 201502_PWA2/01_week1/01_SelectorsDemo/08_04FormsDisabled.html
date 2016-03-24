@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>:disabled demo</title>
+<style>
+
+
+</style>
+</head>
+
+<body>
+<h1>$( ":disabled" )</h1>
+Selects all elements that are disabled.
+<!----Instructions-->
+<!--Find all input elements that are disabled and display a value of "This is disabled" -->
+<form>
+	<input name="email" disabled="disabled">
+	<input name="id">
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+
+	$('input:disabled').val( "this is disabled" );
+
+
+   </script>
+
+</body>
+</html>

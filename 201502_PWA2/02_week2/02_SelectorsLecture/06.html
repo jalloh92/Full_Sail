@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8">	
+<title>Day 2 Demo</title>
+<style type="text/css">
+	.hilite {
+		background-color: #999;
+	}
+</style>
+</head>
+
+<body>
+
+<!---Demo 6 ---->  
+<!--Class Selector -->
+ 		<input class="clickme" type="button" value="Demo 6" />   
+		
+        
+        <div class="hilite">Class Selector</div>
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+ 	<script>
+ 		$(function(){
+ 			
+ 			$(".hilite").fadeOut(2000);
+
+ 			$(".clickme").on("click", function(){
+ 				alert("This is a button");
+ 			});
+
+ 			$(".clickme").click(function(){ /* preferred for buttons */
+ 				alert("This is a button");
+ 			});
+
+
+ 		});
+	</script>
+
+
+</body>
+</html>

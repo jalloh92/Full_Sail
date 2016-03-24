@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--Kelly Rhodes 
+	February 16, 2015
+    Programming for Web Apps II, , on campus, Feb 2015
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Weather API</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+
+<body>
+
+<div id="container">
+	<header> 
+		<h1>Weather Underground API</h1>
+	</header>
+
+	<div class="row">
+		<div id="current_left">
+			<div id="current_head">
+				<h2>Current Conditions</h2>
+				<h3><span id="city">Orlando</span>, <span id="state">FL</span> Weather</h3>
+			</div> <!-- closes current_head -->
+			<div id="current_left_1"></div>
+			<div id="current_left_2"></div>
+		</div><!-- closes current_left -->
+
+		<div id="current_right">
+			<div class="panel wide" id="f1"></div> <!-- 'f' for forecast -->
+			<div class="panel wide" id="f2"></div>
+			<div class="panel wide" id="f3"></div>
+		</div><!-- closes current_right -->
+	
+	</div><!-- closes row (current conditions) -->	
+	
+	<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+	
+	<div class="row" id="buttons">
+		<button>10 Day Forecast</button>
+		<button>Hourly Forecast</button>
+		<button>Almanac</button>
+	</div> <!-- closes row (buttons) -->
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+
+	<div class="row">
+		<h2>10 Day Forecast</h2>
+		<div class="panel" id="t0"></div> <!-- 't' for ten day -->
+		<div class="panel" id="t1"></div> 
+		<div class="panel" id="t2"></div>
+		<div class="panel" id="t3"></div>
+		<div class="panel" id="t4"></div>
+		<div class="panel" id="t5"></div>
+		<div class="panel" id="t6"></div>
+		<div class="panel" id="t7"></div>
+		<div class="panel" id="t8"></div>
+		<div class="panel" id="t9"></div>
+	
+	</div><!-- closes row (10 day) -->
+
+	<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+
+	<div class="row">
+		<h2>Hourly Forecast</h2>
+		<div class="panel" id="h1"></div> <!-- 'h' for hourly -->
+		<div class="panel" id="h2"></div>
+		<div class="panel" id="h3"></div>
+		<div class="panel" id="h4"></div>
+		<div class="panel" id="h5"></div>
+		<div class="panel" id="h6"></div>
+		<div class="panel" id="h7"></div>
+		<div class="panel" id="h8"></div>
+		<div class="panel" id="h9"></div>
+		<div class="panel" id="h10"></div>
+	
+	</div><!-- closes row (Hourly) -->
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+
+	<div class="row">
+		<h2>Almanac</h2>
+		<div id="almanac">
+		</div><!-- closes almanac -->
+	</div><!-- closes row (Almanac) -->
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+
+<div class="row">
+	<h2>Astronomy</h2>
+	<div id="astro">
+	</div><!-- closes astro -->
+</div><!-- closes row (Astronomy) -->
+
+
+</div><!--Closes Container-->
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!--Link to jQuery Library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+<!--Link to main js file-->
+<script type="text/javascript" src="js/main.js"></script>
+
+	
+</body>
+</html>

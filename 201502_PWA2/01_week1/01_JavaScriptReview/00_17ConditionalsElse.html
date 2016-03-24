@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title>Else Statement</title>
+<body>
+
+<p>Click the button to display a time-based greeting:
+   Declare a function named myFunction and a variable named greeting</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+
+<script>
+
+function myFunction(){
+
+	var greeting;
+	var time = new Date().getHours();
+
+	if(time<5){
+			greeting = "It is too early; go back to bed!";
+		} else if (time < 12) {
+			greeting = "Good Morning!";
+		} else if (time < 5) {
+			greeting = "Good Afternoon!";
+		} else if (time < 10) {
+			greeting = "Good Evening";
+		} else {
+			greeting = "You should be in bed!";
+		}
+
+
+	document.getElementById("demo").innerHTML = greeting;
+
+}
+
+
+</script>
+
+
+</body>
+</html>

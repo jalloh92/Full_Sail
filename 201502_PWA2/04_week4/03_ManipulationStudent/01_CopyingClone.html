@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copying - .clone</title>
+<style>
+
+
+</style>
+</head>
+
+<body>
+<p>
+.clone( [withDataAndEvents ] )<br><br>
+~withDataAndEvents (default: false)<br>
+  Type: Boolean<br>
+  A Boolean indicating whether event handlers should be copied along with the elements. As of jQuery 1.4, element data will be copied as well.<br><br>
+  
+.clone( [withDataAndEvents ] [, deepWithDataAndEvents ] )<br>
+~withDataAndEvents (default: false)<br>
+  Type: Boolean<br>
+  A Boolean indicating whether event handlers and data should be copied along with the elements. The default value is false. *In jQuery 1.5.0 the default value was incorrectly true; it was changed back to false in 1.5.1 and up.<br><br>
+
+~deepWithDataAndEvents (default: value of withDataAndEvents)<br>
+Type: Boolean<br>
+A Boolean indicating whether event handlers and data for all children of the cloned element should be copied. By default its value matches the first argument's value (which defaults to false).<br><br>
+
+The .clone() method performs a deep copy of the set of matched elements, meaning that it copies the matched elements as well as all of their descendant elements and text nodes.
+<br><br>
+Syntax<br>
+$(selector).wrap(wrappingElement,function(index))
+</p>
+
+<!----Instructions-->
+<!--Clone all b elements and append them to all paragraphs.-->
+<b> how are you?</b>
+<p>Hello, </p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+(function($){ // Global Document Ready Function
+
+	$('b').clone().appendTo('p');
+
+})(jQuery); // end private scope	
+
+</script>
+
+</body>
+</html>

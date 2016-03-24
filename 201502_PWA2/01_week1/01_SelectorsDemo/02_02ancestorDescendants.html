@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ancestor_Descendants demo</title>
+  <style>
+	 form {
+		border: 2px black solid;
+		padding: 2px;
+		margin: 0;
+		background: rgba(176,171,188,.6);
+	  }
+	  div {
+		color: red;
+	  }
+	  fieldset {
+		margin: 1px;
+		padding: 3px;
+	  }
+   </style>
+</head>
+
+
+<!----Instructions
+Using the ancestor descendant selector:
+1. Mark all inputs that are descendants of a form with a dotted blue border. Note: Use css as the method.
+ -->
+
+
+<body>
+  <form>
+    <div>A descendant of an element could be a child, grandchild, great-grandchild, and so on, of that element.</div>
+    <label for="name">Child of form:</label>
+    <input name="name" id="name">
+      <fieldset>
+        <label for="newsletter">Grandchild of form, child of fieldset:</label>
+        <input name="newsletter" id="newsletter">
+      </fieldset>
+  </form>
+  Sibling to form: <input name="none">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+	   
+   	$(document).ready(function() {
+	   $('form input').css({"border": "3px dotted blue"});
+			
+	});	
+   </script>
+
+
+</body>
+</html>

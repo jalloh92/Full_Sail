@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title>JavaScript</title>
+</head>
+
+<body>
+  <ol>
+    <li>Declare a variable named person.  </li>
+    <li>The person object should have four keys and values.  (FirstName, Lastname, Age, Eye Color) </li>
+    <li>Display the person's firstname and age in a string. </li>
+  </ol>
+ 
+  <p id="demo"></p>
+<script>
+  var person = {
+    firstname:"Peter",
+    lastname:"Paul", 
+    age:90, 
+    eyeColor: "grey"
+  };
+  
+
+  document.querySelector("#demo").innerHTML = person.firstname + " " + person.lastname + " " + person.age + " " + person.eyeColor + " haha this is a string";
+  
+
+</script>
+</body>
+</html>

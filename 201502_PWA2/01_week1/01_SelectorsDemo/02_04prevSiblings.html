@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Next Siblings Selector(prev-siblings)</title>
+  <style>
+   div, span {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 5px;
+      float: left;
+      font-size: 14px;
+      background-color: #CCC;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>$('prev ~ siblings')</h1>
+<p>A selector to filter elements that are the following siblings of the first selector.</p>
+<!----Instructions
+Using the prev ~ siblings selector
+1. Find all divs that are siblings of the element with #prev as its id. 
+2. Add a purple border to them that is 5px with groove. Note: Use CSS as the method.  -->
+    
+<div>Box 1</div>
+<span id="prev">span#prev</span>
+<div>div sibling</div>
+<div>div sibling</div>
+<span>span sibling (not div)</span>
+<div>div sibling</div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <script>
+     
+    $(document).ready(function() {
+     $('#prev ~ div').css({"border": "5px groove purple"});
+      
+  }); 
+  </script>
+
+
+</body>
+</html>

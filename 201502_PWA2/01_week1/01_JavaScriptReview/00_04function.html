@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<p>
+  <ol>
+    <li>When you click "Try it", a function will be called.</li>
+    <li>Make a function will that display a message.</li>
+    <li>Use innerHTML to display the string.</li>
+  </ol>
+</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="element"></p>
+
+<script>
+   function myFunction(){
+    var string = "this is a string";
+    document.querySelector("#element").innerHTML = string;   
+  };
+
+</script>
+</body>
+</html>

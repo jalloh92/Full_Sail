@@ -1,0 +1,36 @@
+.menu_title{
+    background-color: $carmel;
+    color: $white;
+    text-align: center;
+    padding:  10px;
+    margin: 10px;
+}
+
+.menu_group{
+	margin: 10px;
+}
+
+.menu_item_name{
+	color: $white;
+	font-weight: bold;
+	font-size: 1.2em;
+	float: left;
+	width:80%;
+	margin-bottom: 3px;
+
+}
+
+.menu_item_price{
+	float: right;
+	width: 15%;
+	color: $white;
+	margin-bottom: 3px;
+
+}
+
+.menu_item_description{
+	clear: both;
+	padding-bottom: 2%;
+}
+
+

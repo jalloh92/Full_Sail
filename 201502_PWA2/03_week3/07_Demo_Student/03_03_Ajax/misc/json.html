@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>load json</title>
+</head>
+
+<body>
+
+<a href="https://twitter.com/twitterapi" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @twitterapi</a>
+
+
+<div id='Div1'>
+
+
+    <a href="#" id="clickme">Get JSON Data</a>
+
+
+</div>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+    
+$("button").click(function () {
+
+	$.getJSON("users.json", function (obj) {
+
+
+    	$.each(obj.users, function (key, value) {
+        	$("ul").append("<li>" + value.name + "</li>");
+
+    	});
+
+	});
+
+});
+    
+</script>
+</body>
+</html>

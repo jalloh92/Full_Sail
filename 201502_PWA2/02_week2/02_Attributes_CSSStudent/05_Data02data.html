@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Data .data</title>
+<style>
+  div {
+	color: blue;
+  }
+  span {
+	color: red;
+  }
+</style>
+</head>
+
+<body>
+<!----Instructions-->
+<!--Store then retrieve a value from the div element. -->
+<div>
+The values stored were
+<span></span>
+and
+<span></span>
+</div>
+
+<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+<script>
+
+$( "div" ).data( "test", { first: 16, last: "pizza!" } );
+$( "span:first" ).text( $( "div" ).data( "test" ).first );
+$( "span:last" ).text( $( "div" ).data( "test" ).last );
+
+</script>
+
+</body>
+</html>

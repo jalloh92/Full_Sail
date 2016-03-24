@@ -1,0 +1,31 @@
+- name: Coco Cola Sodas
+  description: free refills
+  price: "$2.29"
+
+- name: Lemonade
+  price: "$2.79"
+
+- name: Ice Tea
+  description: free refills
+  price: "$2.29"  
+
+- name: Southern Sweet Tea
+  description: free refills
+  price: "$2.29"  
+
+- name: Jarritos Mandarin Soda
+  price: "$2.50" 
+
+- name: Jarritos Lime Soda
+  price: "$2.50"
+
+- name: Mexican Orange Fanta
+  price: "$2.50"
+
+- name: Mexican Bottled Coke
+  price: "$2.50"
+
+- name: Bottled Water
+  price: "$2.25"  
+
+  

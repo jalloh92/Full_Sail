@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>:root demo</title>
+<style>
+  span.fot {
+	color: red;
+	font-size: 120%;
+	font-style: italic;
+  }
+</style>
+</head>
+
+<body>
+<h1>$( ":root" )</h1>
+
+<!----Instructions-->
+<!--Using the root selector filter, display the tag name of the root element. Note: Use the appendTo method-->
+<div id="log">The root of this document is: </div>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+	   
+   	$(document).ready(function() {
+
+	   	$( "<b></b>" ).html( $( ":root" )[ 0 ].nodeName ).appendTo( "#log" );
+
+	   	// 1) $("<b></b>").html makes the string bold and of type html (not text)
+   		// 2) ($(":root")[0].nodeName) grabs the node name of the root element "html"
+   		// 3) .appendTo("#log") attaches the bold, html word "html" at the end of the log div
+	   	
+	});	
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Class</title>
+ <style>
+  div, span {
+	width: 120px;
+	height: 40px;
+	float: left;
+	padding: 10px;
+	margin: 10px;
+	background-color: #EEEEEE;
+  }
+  </style>
+</head>
+
+<!--Basic Class Selector - jQuery( ".class" )-->
+<!----Instructions-->
+<!--Use the class of pwa as your selector, then add a blue, dotted 3px border.  Note: Use the css method -->
+
+<body>
+  <div class="pwa">I am a box.</div>
+  
+  
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+	   
+   	$(document).ready(function() {
+	   $('.pwa').css({"border": "3px dotted blue"});
+			
+	});	
+   </script>
+
+</body>
+</html>

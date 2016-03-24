@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Form Events - .change( handler )</title>
+<style>
+ div {
+color: red;
+}
+
+</style>
+</head>
+
+<body>
+<!----Istructions-->
+<!--When the user clicks out of the input box, display an alert box telling the user that the text has changed, using the .change method.   -->
+
+<p>.trigger( eventType [, extraParameters ] ) <br>
+
+~eventType <br>
+  Type: String
+  A string containing a JavaScript event type, such as click or submit.
+ <br> <br>
+~extraParameters <br>
+  Type: Array or PlainObject
+  Additional parameters to pass along to the event handler. <br> <br>
+
+.trigger( event [, extraParameters ] )   <br>
+  
+~event
+  Type: Event A jQuery.Event object.<br><br>
+Syntax<br>
+Trigger the change event for the selected elements:<br>
+$(selector).change() <br>
+or<br>
+$(selector).change(function)
+</p>
+
+
+
+<input type="text">
+<p>Write something in the input field, and then press enter or click outside the field.</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+(function($){ // Global Document Ready Function
+
+	$( "input" ).change(function(){
+
+		alert("text has changed!");		
+	});
+
+})(jQuery); // end private scope	
+
+</script>
+
+</body>
+</html>

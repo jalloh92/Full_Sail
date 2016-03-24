@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>:button</title>
+<style>
+ textarea {
+height: 35px;
+}
+div {
+color: red;
+}
+fieldset {
+margin: 0;
+padding: 0;
+border-width: 0;
+}
+.marked {
+background-color: yellow;
+border: 3px red solid;
+}
+</style>
+</head>
+
+<body>
+<h1>$( ':button' )</h1>
+
+<!----Instructions-->
+<!--Find all buttons and add the class of marked. -->
+<form>
+	<fieldset>
+		<input type="button" value="Input Button"><br>
+		<input type="checkbox"><br>
+		<input type="file"><br>
+		<input type="hidden"><br>
+		<input type="image"><br>
+		<input type="password"><br>
+		<input type="radio"><br>
+		<input type="reset"><br>
+		<input type="submit"><br>
+		<input type="text"><br>
+		<select>
+			<option>Option</option>
+		</select><br>
+		<textarea></textarea><br>
+		<button>Button</button><br>
+	</fieldset>
+</form>
+<div></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+
+	$( ":button ,input" ).addClass("marked");
+
+
+   </script>
+
+</body>
+</html>

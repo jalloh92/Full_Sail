@@ -1,0 +1,22 @@
+[
+    {
+        "course": "PWA2",
+        "location": "Campus",
+        "date": "November 15th"
+    },
+    {
+        "course": "DWA1",
+        "location": "Online",
+        "date": "April 25th"
+    },
+    {
+        "course": "PWA1",
+        "location": "Online",
+        "date": "August 11th"
+    },
+    {
+        "course": "WPF",
+        "location": "Campus",
+        "date": "December 16th"
+    }
+]

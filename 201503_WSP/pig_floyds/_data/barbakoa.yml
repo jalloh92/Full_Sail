@@ -1,0 +1,19 @@
+- name: Oakwood Smoked Brisket
+  price: "$13.99"
+
+- name: Oakwood Smoked Pulled Pork
+  price: "$11.99"
+
+- name: Spiced Roasted 1/2 Chicken
+  price: "$9.99"
+
+- name: Oakwood Smoked St. Louis Ribs (1/2 rack) 1.5lb
+  price: "$14.99"
+
+- name: Oakwood Smoked St. Louis Ribs (full rack) 3lb
+  price: "$22.99"
+
+- name: North African Chicken Sausage and Shrimp
+  decription:  "Served with Rice, Plantains, Tikka and Chimicurri"
+  price: "$8.99" 
+  

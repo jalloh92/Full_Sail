@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Keybord Events - .keypress( handler )</title>
+<style>
+  fieldset {
+margin-bottom: 1em;
+}
+input {
+display: block;
+margin-bottom: .25em;
+}
+#print-output {
+width: 100%;
+}
+.print-output-line {
+white-space: pre;
+padding: 5px;
+font-family: monaco, monospace;
+font-size: .7em;
+}
+
+</style>
+</head>
+
+<body>
+
+<p>.keypress( handler )<br><br>
+
+~handler<br>
+  Type: Function( Event eventObject )<br>
+  A function to execute each time the event is triggered.<br><br>
+
+.keypress( [eventData ], handler )<br><br>
+
+~eventData<br>
+  Type: Anything<br>
+  An object containing data that will be passed to the event handler.<br><br>
+Syntax<br>
+Trigger the keypress event for the selected elements:<br>
+$(selector).keypress() 
+<br>or<br>
+$(selector).keypress(function)
+</p>
+
+
+<!----Instructions-->
+<!--Use the key press method to count how letters are typed into an <input> field-->
+
+<p>Enter your name: <input type="text">
+<p>Keypresses: <span>0</span></p>
+</p>
+
+</body>
+</html>

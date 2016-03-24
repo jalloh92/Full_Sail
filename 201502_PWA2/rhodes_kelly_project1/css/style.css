@@ -1,0 +1,603 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: Programming for Web Applications II
+	Site: anewleaf.com
+	Date: February 7, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+		
+/*		Yellow White: 	#fffff3;		 
+/*		Pale Yellow:	#ffffcb;		 
+/*		Pale Olive:		#e2f0d6;		 
+/*		Light Olive:	#bdd684;
+/*		Olive:			#95ab63;		 
+/*		Navy Black		#10222b;		 
+================================================== 
+
+/* Note:  I'm using a 12 column grid as my basis with 60px columns with 10px margins (20px gutter between columns).
+
+/* 1 column span:  60px;
+/* 2 column span:  140px;
+/* 3 column span:  220px;
+/* 4 column span:  300px;
+/* 5 column span:  380px;
+/* 6 column span:  460px;
+/* 7 column span:  540px;
+/* 8 column span:  620px;
+/* 9 column span:  700px;
+/* 10 column span: 780px;
+/* 11 column span: 860px;
+/* 12 column span: 940px;
+
+
+/* --------------------------$ Generic Page Elements 
+--------------------------------------------------- */
+
+body{
+	background-image: url("../images/ricepaper.png"); /* has an olive tint to it */
+	padding:0;
+	margin:0;
+}
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+
+	-moz-box-shadow: 0 0 10px #10222b; /* Navy Black */
+	-ms-box-shadow: 0 0 10px #10222b; /* Navy Black */
+	-o-box-shadow: 0 0 10px #10222b; /* Navy Black */
+	-webkit-box-shadow: 0 0 10px #10222b; /* Navy Black */
+	box-shadow: 0 0 10px #10222b; /* Navy Black */
+
+	/* -- Light Olive to Olive Gradient */
+	background: #bdd684; /* Old browsers */
+	background: -moz-linear-gradient(top,  #bdd684 0%, #95ab63 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bdd684), color-stop(100%,#95ab63)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #bdd684 0%,#95ab63 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #bdd684 0%,#95ab63 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #bdd684 0%,#95ab63 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #bdd684 0%,#95ab63 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bdd684', endColorstr='#95ab63',GradientType=0 ); /* IE6-9 */
+
+}
+
+.inner{
+	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+.wrapper{
+	padding: 10px;
+}
+
+h1, h2, h3, p, label, li{
+	color: #10222b; /* Navy Black */
+	font-family: "Calibri", Arial, Helvetica, sans-serif;
+	padding: 5px 0;
+	margin:0;
+}
+
+h1{
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.tooltip {
+	display: none;
+	position: absolute;
+	border: 1px solid #95ab63; /* Olive */
+	background-color: #10222b; /* Navy Black */
+	border-radius: 5px;
+	padding: 10px;
+	color: #fffff3; /* Yellow White */
+	font-size: 12px;
+	z-index: 1002;
+}
+
+
+/* --------------------------$ Navigation & LogIn
+--------------------------------------------------- */
+
+.nav_bar{
+	background-color: #ffffcb;
+	height: 130px;
+	margin: 0;
+	background-image: url("../images/Leaves-Pattern-50.jpg");
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+#logo{
+	float:left;
+	position: relative;
+	top: 35px;
+  	transform: translateY(-50%);
+	padding: 15px 9px 0 0;
+}
+
+#login, #logout{
+	padding-top: 10px;
+	float:right;
+	position: relative;
+  	top: 40px;
+  	transform: translateY(-50%);
+}
+
+#login button{
+	margin-top: -5px;
+}
+
+#login div{
+	display: inline;
+}
+
+.userid{
+	margin: 2px 0;
+	color: #10222b; /* Navy Black */
+	font-family: "Calibri", Arial, Helvetica, sans-serif;
+}
+
+#logo a img, #logo a{
+	text-decoration: none;
+}
+
+/* ------------$ Generic Form Elements
+--------------------------------------------------- */
+
+button:focus, input[type=submit]:focus, input[type=button]:focus {outline:0 !important;}
+
+input[type=text], input[type=password], input[type=email], textarea, button { /* Resets form from defaults */
+	-webkit-appearance:none;
+	-moz-appearance: none;
+	border: none;
+	background: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	padding: 0;
+	margin:  0 2px;
+}
+
+form{
+	padding:10px;
+}
+
+.item{
+	clear: both;
+	margin-bottom: 10px;
+	height: 25px;
+}
+
+.item label{
+	width: 130px; /* 2 column span - 10px left padding (form) */
+	float: left;
+}
+
+
+.item input[type=text], .item input[type=password],.item input[type=email],#icon_box {
+	width: 440px; /* 6 column span - 10px right padding (form) */
+	float: right;
+	margin-right:0px;
+}
+
+.flt_right, label.error {
+	width: 450px; /* 6 column span - 10px right padding (form) */
+	float: right;
+}
+
+label.error {
+	color: red;
+	font-style: italic;
+}
+
+form button{
+	clear:both;
+	margin-top: 10px;
+}
+
+.flt_right input[type=submit]{
+	float:right;
+	margin-top: 20px;
+}
+
+
+
+input[type=text], input[type=password], input[type=email]{
+	border: 2px solid #10222b; /* Navy Black */
+	background-color:  #fffff3; /* Yellow White */
+	color: #10222b; /* Navy Black */
+	font-size: 14px;
+	padding: 3px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
+	outline: 2px solid #95ab63; /* Olive */
+}
+
+/* --------------------------$Footer 
+--------------------------------------------------- */
+footer{
+	text-align: center;
+	padding: 5px 0;
+	clear: both;
+}
+
+footer p{
+	color:  #10222b; /* Navy Black */
+}
+
+/* ---------------------------------------------------
+--------------- INDEX PAGE ---------------------------
+--------------------------------------------------- */
+
+/* --------------------------$Call to Action 
+--------------------------------------------------- */
+
+#section1{
+	clear:both;
+	background-image: url("../images/woman_profile.jpg");
+	/* image courtesy of https://www.flickr.com/photos/pedrosimoes7 */
+	background-repeat: no-repeat;
+	height: 550px;
+	margin:0;
+	position: relative;
+	position: -5px;
+	
+	-moz-box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+	-webkit-box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+	box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+}
+
+#cta{
+	width: 360px; /* 5 column span minus 10px padding on each side */
+	float:right;
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	margin-right: 10px;
+  	background-color: rgba(255,255,243,.6); /* Yellow White */
+  	padding:10px;
+}
+
+/* --------------------------$Benefits 
+--------------------------------------------------- */
+#section2{
+	height: 300px;
+	margin-top: 20px;
+}
+
+.benefit{
+	width: 280px; /* 4 column span minus 10px each side for padding */
+	float: left;
+	margin: 10px;
+	background-color: #ffffcb; /* Pale Yellow */
+	padding: 10px;
+	height: 245px;
+
+	-moz-box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+	-webkit-box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+	box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+}
+
+.benefit img{
+	margin: 10px 100px;
+}
+
+
+/* ---------------------------------------------------
+------------ REGISTER PAGE ---------------------------
+--------------------------------------------------- */
+
+/* Would like to adjust width of fields so I can get
+plan boxes to line up with input fields.  Float terms 
+agreement checkbox to the right? Add padding / margin 
+below total amounts in plan boxes */
+
+#featurette{
+	width: 620px; /* 8 column span */
+	margin: 0 auto;
+	padding-bottom: 60px;
+	height: 1000px;
+}
+
+
+.plan{
+	width:142px; /* 450px / 3 */
+	float: left;
+	margin-left: 6px;
+	border: 2px solid #10222b; /* Navy Black */
+	background-color:  #fffff3; /* Yellow White */
+}
+
+.plan:first-child{
+	margin-left: 0px;
+} 
+
+.plan img, .plan h3, .plan p{
+	margin: 0 auto;
+	text-align: center;
+	padding: 1px;
+}
+
+.plan img{
+	display: block;
+	margin-top: 5px;
+}
+
+.plan:hover, div.checked{
+	background-color:  #ffffcb; /* Pale Yellow */
+}
+
+input[type=checkbox]{
+	margin-left: 0px;
+}
+
+#modal button, #register {
+	float: right;
+	width: 130px; /* 2 column span - 10px left padding (form) */
+	margin-bottom: 20px;
+	margin-right: 0px;
+}	
+
+#dialog-message{
+	display:none;
+}
+
+/* ---------------------------------------------------
+--------------- ADMIN PAGE ---------------------------
+--------------------------------------------------- */
+#admin_logo{
+	position: absolute;
+	left: 725px;
+	top: 375px;
+}
+
+/* --------------------------$Tabs
+--------------------------------------------------- */
+
+#tabs{
+	background-color: #ffffcb; /* Pale Yellow */
+	width: 600px; /* 8 column span - 10 column padding on each side */
+	height: 150px;
+	padding: 10px;
+	margin: 0 auto;
+	border: 1px solid #10222b; /* Navy Black */
+
+	-moz-box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+	-webkit-box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+	box-shadow: 0px 5px 5px #10222b; /* Navy Black */
+}
+
+#tabs-nav{
+	width: 622px; /* 8 column span */
+	background-color: transparent;
+	text-decoration: none;
+	list-style-type: none;
+	padding: 20px 0;
+	margin:0 auto;
+
+}
+
+#tabs-nav li{
+	background-color: #95ab63; /* Olive */
+	display: inline;
+	padding: 20px;
+	border: 1px solid #10222b; /* Navy Black */
+	text-decoration: none;
+}
+
+#tabs-nav li a {
+	text-decoration: none;
+	color: #10222b; /* Navy Black */;
+}
+
+#tabs-nav .current{
+	background-color: #ffffcb; /* Pale Yellow */
+	border-bottom: none;
+}
+
+.tab_left{
+	float: left;
+	width: 480px;
+}
+
+.tab_right{
+	float: right;
+	width: 120px;
+}
+
+/* ---------------------------------------------------
+------------ PROJECTS PAGE ---------------------------
+--------------------------------------------------- */
+
+.projectBox{
+	padding: 10px;
+	border: 2px solid #10222b; /* Navy Black */
+	background-color:  #ffffcb; /* Pale Yellow */
+}
+
+.projectBox p {
+	padding: 3px 0;
+}
+
+.editbtn, .deletebtn{ 
+	color: #fffff3; /* Yellow White */
+	background-color: #95ab63; /* Olive */
+	border: 2px solid #10222b; /* Navy Black */
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	font-size: 14px;
+	padding: 6px;
+	margin: 10px;
+}
+
+.deletebtn{
+	margin-left:0px;
+}
+
+.editbtn:hover, .deletebtn:hover{
+	color: #95ab63; /* Olive */
+	background-color: #fffff3; /* Yellow White */
+}
+
+.ui-state-default{
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#dialog-confirm{
+	display:none;
+}
+
+.project_left{
+	width: 400px;
+}
+
+.project_right{
+	width:150;
+	float:right;
+	margin-top: -125px;
+
+}
+
+/* --------------------------$Sortable
+--------------------------------------------------- */
+
+#sortable{
+	list-style-type: none;
+	margin:0;
+	padding:10px;
+	width:98%;
+}
+
+#sortable li{
+	margin:0 3px 3px 3px;
+	padding: 0.8em;
+	padding-left: 1.5em;
+	font-size: 1em;
+	height: 90px;
+}
+
+#sortable li span{
+	position: absolute;
+	margin-left: -1.3em;
+}
+
+/* --------------------------$Overlay Elements (Add projects)
+--------------------------------------------------- */
+
+#overlay{
+	width: 100%;
+	height:100%;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1000;
+	display:none;
+}
+
+/* --------------------------$Modal Elements (Add Projects)
+--------------------------------------------------- */
+
+#modal {
+	width: 620px; /* 8 column span */
+	background: #ffffcb; /* Pale Yellow */
+	box-shadow: 0 0 10px #000;
+	border-radius: 2px;
+	overflow: hidden;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -350px;
+	z-index: 1001;
+	display: none;
+}
+
+#modal .header{
+	background: #10222b; /* Navy Black */	
+	color: #ffffcb; /* Pale Yellow */
+	padding: 10px;
+}
+
+#modal p{
+	margin: 15px;
+}
+
+#modal .close{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 10px;
+	border: 1px solid #fffff3; /* Yellow White */
+	cursor: pointer;
+	background-color: #95ab63; /* Olive */
+}
+
+#modal .close:hover{
+	background-color: #ffffcb; /* Pale Yellow */
+	border: 1px solid #95ab63; /* Olive */
+}
+
+.mystatus > input[type=radio]{
+	display:none;
+}
+
+input[type=radio] + img{
+	cursor: pointer;
+	border: 2px solid transparent;
+}
+
+input[type=radio]:checked + img{
+	border: 2px solid #95ab63; /* Olive */
+	background-color: #10222b; /* Navy Black */
+}
+
+#nofun{
+	float:right;
+	width: 150px;
+}
+
+/* ---------------------------------------------------
+--------------- PROFILE PAGE ---------------------------
+--------------------------------------------------- */
+#avatar{
+	float: left;
+	width: 140px;
+}
+
+.avatarPhoto{
+	width: 100px;
+	height: 100px;
+	display: block;
+	margin: 0 auto;
+}
+
+.avatarPhoto img{
+	margin-top: -16px;
+}
+
+#updateaccountinputs{
+	width: 800px;
+	float: right;
+}
+
+#updateaccountinputs .item{
+	width: 600px;
+	margin: 0 auto;
+
+}
+
+#updateAcctBtn{
+	margin-top: 15px;
+	margin-left: 555px;
+}

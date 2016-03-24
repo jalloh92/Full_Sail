@@ -1,0 +1,123 @@
+<!doctype html>  
+
+<!--
+	This is the profile page of the application
+	
+	All your script tags should be at the bottom of this file
+	
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>My Profile</title>
+	<meta name="description" content="Resources for the Newly Single">
+	<meta name="author" content="Kelly Rhodes">
+
+	<link rel="shortcut icon" href="images/newleaf_logo_50.png">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.min.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.structure.min.css">
+	<link rel="stylesheet" href="js/plugins/jquery-ui-custom/jquery-ui.theme.min.css">
+	<!-- end CSS-->
+	
+</head>
+
+<!-- ========================================================= -->
+
+<body>
+
+	<div header class="nav_bar login">
+		<div class="inner">
+			<div id="logo">
+					<a href="index.html">
+						<img src="images/newleaf_logo_50.png" alt="logo"/>
+						<img src="images/newleaf_name_50.png" alt="logo"/>
+					</a>	
+				</div><!-- closes logo -->
+
+			<div id="logout">
+				<div class="userid">
+					<p>Welcome, User:</p>
+				</div><!-- closes userid -->
+
+				<div class = "logoutbox">	
+					<input id="dashboard" name="dashboard" type="button" class="dboardbtn masterTooltip" title="Click here for your dashboard" value="Dashboard" />
+					<input id="profile" name="profile" type="button" class="profilebtn masterTooltip" title="Click here for your profile" value="Profile" />
+					<input id="logOut" name="logOut" type="button" class="logoutbtn masterTooltip" title="Click here to log out" value="Log Out" />
+				</div><!-- closes logout box-->	
+			</div><!-- closes logout -->
+
+		</div><!-- closes inner -->	
+	</div><!-- header (closes nav_bar / login) -->
+
+<!-- ========================================================= -->
+
+	<div class="container wrapper">
+
+		<div id="editAcct">
+
+			<h3>Your Account Information</h3>
+
+			<div id="avatar">
+				<div class="avatarPhoto"><br>
+					<img src="images/avatar_100.png" alt="avatar"/>
+					<!-- <input id="updateavatar" type="file"><br><br> -->
+					<!-- <button name="avatar" class="updateAvatar">Update Avatar</button> -->
+				</div><!-- closes avatar photo -->
+			</div><!-- closes avatar -->
+
+			<div id="updateaccountinputs">
+				
+				<div class="item">
+					<label>First Name:</label>
+					<input type="text" class="masterTooltip" title="Add or change your last name" id="updatefirstname"><br> 
+				</div>
+
+				<div class="item">
+					<label>Last Name:</label>
+					<input type="text" class="masterTooltip" title="Add or change your first name" id="updatelastname"><br> 
+				</div>
+
+				<div class="item">
+					<label>Email:</label>
+					<input type="email" class="masterTooltip" title="Add or change your email" id="updateemail"><br><br>
+				</div>
+			</div><!-- closes update acct inputs -->
+			<button id="updateAcctBtn">Save Changes</button> 
+
+		</div><!-- closes Edit Acct -->
+
+	</div><!-- closes container -->
+
+<!-- ========================================================= -->
+
+	<footer>
+		<p>&copy; 2015 Kelly Rhodes</p>
+	</footer>
+			
+<!-- ========================================================= -->
+
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jQuery-1.11.2-min.js"></script>
+	
+	<!-- plugins -->
+	<script type="text/javascript" src="js/plugins/jquery-ui-custom/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery-validation-1/dist/jquery.validate.js"></script>
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>

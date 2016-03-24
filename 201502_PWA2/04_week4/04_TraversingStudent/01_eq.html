@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Traversing - .eq( index )</title>
+<style>
+ div {
+width: 60px;
+height: 60px;
+margin: 10px;
+float: left;
+border: 2px solid blue;
+}
+.blue {
+background: blue;
+}
+
+</style>
+</head>
+
+<body>
+<p>
+.eq( index )<br><br>
+~index<br>
+  Type: Integer<br>
+  An integer indicating the 0-based position of the   element.<br>
+<br>
+.eq( indexFromEnd )<br><br>
+~indexFromEnd<br>
+  Type: Integer<br>
+  An integer indicating the position of the element, counting backwards from the last element in the set.
+<br><br>
+Syntax<br>
+$(selector).eq(index)
+ </p> 
+<!----Instructions-->
+<!--Find the third div using the .eq method and add a class of blue -->
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+
+(function($){ // Global Document Ready Function
+
+	$( "body" ).find('div').eq( 2 ).addClass("blue");
+
+})(jQuery); // end private scope	
+
+</script>
+
+</body>
+</html>

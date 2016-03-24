@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Hotel Rica",
+        "location": "Costa Rica",
+        "date": "November 15th",
+        "days": "5",
+        "image": "4.jpg",
+        "rating": "2"
+    },
+    {
+        "title": "Hotel Bahamas",
+        "location": "Bahamas",
+        "date": "April 25th",
+        "days": "2",
+        "rating": "4",
+        "image": "4.jpg"
+    },
+    {
+        "title": "Somewhere Hotel",
+        "location": "Key West",
+        "date": "August 11th",
+        "days": "14",
+        "rating": "5",
+        "image": "5.jpg"
+    },
+    {
+        "title": "W Hotel",
+        "location": "New York City",
+        "date": "December 16th",
+        "days": "4",
+        "rating": "5",
+        "image": "3.jpg"
+    }
+]

@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="UTF-8">	
+<title>Day 2 Demo</title>
+<style type="text/css">
+	.hilite {
+		background-color: #999;
+	}
+	
+	 .visbox {
+		width: 50px;
+		height: 40px;
+		margin: 5px;
+		border: 3px outset green;
+		float: left;
+	}
+	
+	.starthidden {
+		display: none;
+	}
+</style>
+</head>
+
+<body>
+
+<!---Demo 7 ---->  
+<!--Even Selector -->
+<!--&-->
+<!---Demo 8 ---->  
+<!--EQ Selector -->
+<div>
+<table border="1">
+  <tr><td>Row with Index #0</td></tr>
+  <tr><td>Row with Index #1</td></tr>
+  <tr><td>Row with Index #2</td></tr>
+  <tr><td>Row with Index #3</td></tr>
+</table>
+</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+ 	<script>
+ 		$(function(){
+ 			$("tr:even").css("background-color", "#c0ffee");
+ 			$("tr:eq(2)").css("color", "red");
+ 		});
+	</script>
+
+</body>
+</html>

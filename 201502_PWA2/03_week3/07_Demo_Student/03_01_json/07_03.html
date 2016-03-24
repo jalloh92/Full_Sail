@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+
+<h2>Create Object from JSON String - Complex</h2>
+<div id="placeholder"></div>
+
+<script>
+    var data={"students":[
+            {
+                "firstName":"Crystal",
+                "lastName":"Silvestro",
+                "startDate": {
+                    "month":"January",
+                    "day":12,
+                    "year":2012
+                },
+				"gradDate": {
+                    "month":"January",
+                    "day":12,
+                    "year":2013
+				}
+            },
+            {
+                "firstName":"Jim",
+                "lastName":"Smith",
+                "startDate": {
+                    "month":"September",
+                    "day":12,
+                    "year":2012
+                },
+				"gradDate": {
+                    "month":"September",
+                    "day":12,
+                    "year":2013
+				}
+            },
+    ]}
+
+     document.getElementById("placeholder").innerHTML = data.students[0].firstName + " " + data.students[0].lastName + " -- " + data.students[0].gradDate.month;
+</script>
+
+
+</body>
+</html>

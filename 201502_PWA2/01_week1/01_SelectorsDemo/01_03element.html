@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Element</title>
+ <style>
+   div {
+	  width: 90px;
+	  height: 90px;
+	  float: left;
+	  padding: 5px;
+	  margin: 5px;
+	  background-color: #eee;
+	}
+  </style>
+</head>
+
+<!--Element Selector-->
+<!----Instructions-->
+<!--Use the DIV element as your selector and add a pink background color to them. Note: Use the css method-->
+
+<body>
+  <div>Crystal</div>
+  <div>Bob</div>
+    <span>Tim</span>
+  
+  
+  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+   <script>
+	   
+   	$(document).ready(function() {
+	   $('div').css({"background-color": "pink"});
+			
+	});	
+   </script>
+
+</body>
+</html>

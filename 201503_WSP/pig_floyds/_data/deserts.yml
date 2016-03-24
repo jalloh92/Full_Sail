@@ -1,0 +1,11 @@
+- name: "Black & Tan"
+  description: "Dark Chocolate Brownie Bites, Chocolate Chip Cookie Chunks and Cookie & Cream Pudding"
+  price: "$4.99"
+
+- name: Pig Pickin' Parfait
+  description: "Homemade Vanilla Cake, Fresh Pineapple, Mandarin Oranges and Diplomat Cream Topped with Toasted Pecans"
+  price: "$4.99"
+
+- name: "'Cuban' Banana Pudding"
+  description: "Homemade Cinnamon & Lemon Custard, Bananas and 'Nilla Wafers Topped with Whipped Cream"
+  price: "$4.99" 
