@@ -1,0 +1,156 @@
+/*-------------------------PROJECT REQUIREMENTS------------------------------------------
+You will be graded on your ability to demonstrate a proficiency in each of these concepts and you will see these reflected in the grading rubric provided. Below are the concepts broken down into the requirements for the project:
+
+1.  CSS color
+	a.  Add foreground and background colors using:
+		-- RGB, Hex, or HSL values (no Color Keywords)
+	b.  Add opacity using:
+		-- Opacity, RGBA, or HSLA
+2.  Styling text
+	a.  The following CSS properties should be used:
+		-- font-family
+		-- font-size
+		-- font-weight
+		-- font-style
+		-- line-height
+		-- text-align or text-indent
+		-- text-shadow
+	b.  Add a web based font using:
+		-- <link /> or @font-face
+	c.  Style your links using the following CSS pseudo-classes:
+		-- a:link
+		-- a:visited
+		-- a:hover
+		-- a:active
+	d.  Change the default list styling using:
+		-- list-style-type
+3.  Box model
+	a.  The following CSS properties should be used:
+		-- width
+		-- height
+		-- padding
+		-- border
+		-- margin
+	b.  Center your page using:
+		-- width
+		-- auto margins
+	c.  Add rounded corners using:
+		-- border-radius
+	d.  Add box shadow using:
+		-- box-shadow
+	e.  Change the display of elements from their default using:
+		-- display
+4.  Comments
+	-- Add comments to both your HTML and CSS to help with organization. For example, HTML comments where divs close ("end content") and CSS comments to split the stylesheet into different sections ("main styles", "navigation", "layout", etc.).
+5.  Validation
+	-- Make sure both your HTML and CSS are valid using the W3C Validation Services.
+*/
+
+/*------------------------------------[  CSS  ]----------------------------------------*/
+
+/*-----------------------------------[  LAYOUT  ]-------------------------------------*/
+
+
+body {
+	font-size: 0.9em;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: normal;	
+	background-color: #b8ae9c;
+}
+
+#page {
+	width:  850px;
+	border:  10px double #accfcc;
+	padding:  20px;	
+	margin:  10px auto 10px auto;
+	background-color: #ffffff;
+	opacity:  0.75;
+}
+
+
+/*------------------------------[  MAIN FONT STYLES ]----------------------------------*/
+
+
+h1, h2, h3 {            /*---------Heading Styles---------------*/
+	font-family: 'Raleway', sans-serif;
+	color: #8A0917;
+	text-align: center;
+	line-height: 1.5em;
+	text-shadow: 1px 1px 0px #000000;
+}	
+
+
+p {						/*---------Paragraph Style---------------*/
+	margin:  20px auto 20px auto;
+}
+
+em {					/*---------Emphasis Style---------------*/
+	font-style: italic;
+}
+
+ol { 					/*---------Ordered List Style---------------*/
+	list-style-type: decimal-leading-zero;
+}
+
+
+/*------------------------------[  SPECIALTY ITEMS ]----------------------------------*/
+
+#special {				/*---------Special box under heading 1---------------*/
+	background-color:  #ffffff;
+	border: 5px solid #accfcc;
+	width: 400px;
+	margin: 0px auto 0px auto; 
+	box-shadow: inset 0 0 10px #000;
+	text-align: center;
+}
+
+/*------------------------------[  FIGURES ]----------------------------------*/
+
+figure {			/*---------Images + Fig Caption---------------*/
+	width:  400px;
+	margin: 0px auto 0px auto;
+}
+
+img {				/*---------Images---------------*/
+	border: 5px solid #accfcc;
+	border-radius:  50px;
+}
+
+figcaption {		/*---------Fig Caption---------------*/
+	text-align:  center;
+	padding: 0px 0px 10px 0px;
+}
+
+/*-------------------------------[  NAVIGATION  ]------------------------------------*/
+
+#navigation{
+	width: 600px;
+	margin: 0px auto 0px auto;
+}
+
+li.nav {			/*---------Navigation Links---------------*/
+	display:  inline;
+	border: 5px solid #accfcc;
+	
+}
+
+/*----------------------------------[  LINKS  ]--------------------------------------*/
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color:  #8A0917;
+	font-weight: bold;
+}
+	
+a:hover {
+	color: #8A0917;
+	text-decoration: underline;
+}
+
+a:active {
+	color:  #accfcc;
+}

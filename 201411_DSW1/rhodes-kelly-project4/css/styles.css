@@ -1,0 +1,292 @@
+/*-------------------------PROJECT REQUIREMENTS------------------------------------------
+You will be graded on your ability to demonstrate a proficiency in each of these concepts and you will see these reflected in the grading rubric provided. Below are the concepts broken down into the requirements for the project:
+
+
+-- Style your table using the following CSS properties:
+	-- width
+	-- padding
+	-- text-transform or letter-spacing
+	-- font-size
+	-- border
+	-- background-color
+	-- border-spacing or border-collapse
+	-- :hover
+
+-- Style your form using the following CSS properties:
+	-- padding
+	-- margin
+	-- font-size
+	-- color
+	-- border
+	-- text-align
+	-- background-color or background-image
+	-- :hover
+	-- :focus
+	-- Float each form title next to its corresponding form control. The following properties should be utilized:
+		-- width
+		-- float
+	-- Use the following pseudo classes to style form controls:
+		-- :hover
+		-- :focus
+*/
+
+/*------------------------------------[  CSS  ]----------------------------------------*/
+
+/*-----------------------------------[  LAYOUT  ]-------------------------------------*/
+
+
+body {
+	font-size: 0.9em;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: normal;	
+	background-image:  url("../images/pattern_038.gif");
+}
+
+#page {
+	width:  90%;
+	border:  10px double #accfcc;
+	border-radius: 20px;
+	padding:  20px;	
+	margin:  1% auto 1% auto;
+	background-color: #ffffff;
+	opacity:  0.75;
+	overflow: auto;
+}
+
+#main {
+	width: 60%;
+	float: left;
+}
+
+.clear {
+	clear: left;
+}
+
+/*------------------------------[  MAIN FONT STYLES ]----------------------------------*/
+
+
+h1, h2, h3 {            /*---------Heading Styles---------------*/
+	font-family: 'Raleway', sans-serif;
+	color: #8A0917;
+	text-align: left;
+	line-height: 1.5em;
+}	
+
+
+p {						/*---------Paragraph Style---------------*/
+	margin:  2% auto 2% auto;
+}
+
+em {					/*---------Emphasis Style---------------*/
+	font-style: italic;
+}
+
+ol { 					/*---------Ordered List Style---------------*/
+	list-style-type: decimal-leading-zero;
+}
+
+/*-------------------------------[  NAVIGATION  ]------------------------------------*/
+
+nav {
+	list-style-type: none;
+	width: 98%; 	
+	border: 10px solid #accfcc;
+	border-radius: 5px;
+	background-color:  #accfcc;
+	margin-bottom: 2%;
+}
+
+
+nav li {			/*---------Navigation Links---------------*/
+	display:  inline;
+	text-align: center;
+	font-size:  0.8em;
+	padding:  5px;
+	border: 1px solid #accfcc;
+	background-color:  #D7D6CB;
+	
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+
+/*----------------------------------[  LINKS  ]--------------------------------------*/
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color:  #8A0917;
+	font-weight: bold;
+}
+	
+a:hover {
+	color: #8A0917;
+	text-decoration: underline;
+}
+
+a:active {
+	color:  #accfcc;
+}
+
+/*----------------------------------[  TABLE  ]--------------------------------------*/
+
+table {
+	border-spacing:  0px;
+	background-color: #D7D6CB;
+}
+
+tr {
+	padding: 1px;
+	border: 5px solid #accfcc;
+}
+
+tr:hover {
+	background-color: #8A0917;
+}
+
+th, td { 
+	padding: 5px 30px 5px 10px; 
+	border-spacing: 0px; 
+	font-size: 75%; 
+	margin: 0px;
+}
+
+th {
+	width:  20%;
+	letter-spacing: 0.1em;
+	text-align:  right;
+}
+
+/*----------------------------------[  FORM  ]--------------------------------------*/
+
+#registration {
+	clear: left;
+}
+
+fieldset{
+	margin-top: 2%;
+	border: 5px solid #accfcc; 
+	border-radius: 25px;
+	font-size:  .9em;
+}
+
+legend{
+	font-style:  italic; 
+	color: #8A0917;
+}
+
+input[type="text"], input[type="email"], input[type="checkbox"], textarea { 
+	border: 3px solid #accfcc;
+	border-radius: 5px; 
+	padding: 2px; 
+	outline: none;
+}
+
+input[type="text"]:focus, input[type="text"]:hover, input[type="email"]:focus, input[type="email"]:hover, input[type="checkbox"]:focus, input[type="checkbox"]:hover, textarea:focus, textarea:hover {
+	background-color: #d0e2f0;
+	border: 3px solid #999999;
+} 
+
+.title{
+	float: left;
+	width:  25%;
+	clear: left;
+	text-align: right;
+	margin-right: 1%;
+}
+
+input[type="submit"] {
+	border: 3px solid #8A0917; 
+	border-radius: 5px;
+	font-size: 1.1em; 
+	color: #ffffff; 
+	padding: 5px;
+	margin-top: 10px;
+} 
+
+input[type="submit"]:hover {
+	background-color: #accfcc;
+	 cursor: pointer;}
+
+#submit {
+	text-align: right;
+}
+/*------------------------------[  FIGURES / GALLERY ]--------------------------------*/
+
+aside {
+	width: 30%;
+	float: right;
+	
+	opacity:  1.0;
+	border: 5px solid #accfcc; 
+	border-radius: 25px;
+	box-shadow: inset 0 0 10px #000;
+	text-align: center;
+	
+	/* background gradient: */
+	background: #fcfff4; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fcfff4 0%, #e9e9ce 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(100%,#e9e9ce)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #fcfff4 0%,#e9e9ce 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=0 ); /* IE6-9 */
+	/* end of gradient */	
+}
+
+aside h2 {
+	text-align: center;
+}
+	
+figure {		/*---------Images + Fig Caption---------------*/
+	width: 100%;
+	margin: 0% auto;
+	
+}
+
+img {			/*---------Images---------------*/
+	border: 5px solid #accfcc;
+	border-radius: 25px;
+}
+
+figcaption {	/*---------Fig Caption---------------*/
+	font-size: 0.7em;
+	text-align:  center;
+	padding-bottom: 3%;
+	margin: 2%;
+	
+}
+
+/*------------------------------[  FOOTER ]--------------------------------*/
+footer {
+	width: 95%; 	
+	background-color:  #accfcc;
+	border: 1px solid #accfcc;
+	border-radius: 5px;
+	height: 34px;
+	margin-top: 45px;
+
+	background-image:  url("../images/up_arrow.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding: 5px;
+		
+}	
+
+footer p {
+	margin: 5px 0 0 40px;
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #accfcc;
+	background-color:  #D7D6CB;
+	width: 7%;
+	font-size:  0.8em;
+}
+
