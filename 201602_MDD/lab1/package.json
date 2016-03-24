@@ -1,0 +1,20 @@
+{
+  "name": "lab1",
+  "version": "0.0.0",
+  "description": "MDD 201602:  Lab 1",
+  "main": "server.js",
+  "dependencies": {
+    "react":"^0.14.*",
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "babel-core":"^5.8.*",
+    "babel-loader":"^5.3.*",
+    "webpack":"^1.12.*" 
+  },
+  "devDependencies":{},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Kelly Rhodes"
+}
