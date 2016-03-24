@@ -1,3 +1,3 @@
-# Web Programming Fundamentals
-* August 2014
-* Beginning Javascript
+# Design Patterns for Web Programming
+* May 2015
+* Object-Orientated Programming using Python

@@ -28,3 +28,11 @@ Private repo for Full Sail Assignments
 ## [Design Patterns for Web Programming](https://github.com/karhodes/private/tree/master/201505_DWP)
 * May 2015
 * Object-Orientated Programming using Python
+
+## [Advanced Server Side Languages](https://github.com/karhodes/private/tree/master/201509_ASL)
+* August 2015
+* CakePHP project for development Bill of Materials
+
+## [Mobile Device Deployment](https://github.com/karhodes/private/tree/master/2016_MDD)
+* February 2016
+* React & React-Native
