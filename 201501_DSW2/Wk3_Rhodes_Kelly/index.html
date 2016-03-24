@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Rental Application</title>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#logo").addClass("animated");
+		});
+	</script>	
+	<script>
+		function showValue(newValue){
+			document.getElementById("range").innerHTML="$" + newValue;
+		}
+	</script>
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/main.css">
+
+<!-- [if lt IE 9]>
+	<style>
+		input[type=submit]{
+			border-radius: 0px;
+			border-left: none;
+			box-shadow: none;
+		}
+	</style>
+<![endif]-->
+
+<!--[if lt IE 8]	
+	<style>
+		legend{
+			display: block
+			font: 1.2em Cantarell, Arial, Helvetica, sans-serif;
+			font-weight: bold;
+			border-bottom: 1px solid rgb(76, 67, 65);
+			width: 80%
+		}
+	</style>
+<![endif]-->
+
+<!-- from form video on lynda; used to make mobile devices scale properly -->
+<meta name="viewport" content="width-device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<!-- ======================================================================= -->
+
+<body>
+
+	<header>
+		<div id="logo">Rhodes Realty</div>
+
+		<div id="header_txt">
+			<h2>Ready to move on?</h2>
+			<h1>Rental Application</h1>
+		</div>
+	</header>
+
+	<!-- ================================================================= -->
+
+	<div id="featurette">
+		<form> 
+			
+			<fieldset>
+				<h3><span class="form-step">1</span>Your Basic Information</h3>
+
+				<div class="row">
+					<div class="item">
+						<label for="fnameitem">First Name:</label>
+						<input type="text" name="fname" id="fnameitem"/>
+					</div>
+
+					<div class="item">
+						<label for="lnameitem">Last Name:</label>
+						<input type="text" name="lname" id="lnameitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="emailitem">Email:</label>
+						<input type="email" name="email" id="emailitem"/>
+					</div>
+
+					<div class="item">
+						<label for="phoneitem">Phone Number:</label>
+						<input type="tel" name="phone" id="phoneitem" placeholder="123-456-7890"/>
+					</div>
+				</div><!-- closes row -->
+					
+				<div class="row">
+					<p>I have a dog(s):</p>
+					<label><input type="radio" id="hasdogsyes" name="hasdogs" value="yes"> Yes</label>
+					<label><input type="radio" id="hasdogsno" name="hasdogs" value="no"> No</label>
+				</div><!-- closes row -->
+
+				<div class="row">
+				<p>I have a cat(s):</p>
+					<label><input type="radio" id="hascatssyes" name="hascats" value="yes"> Yes</label>
+					<label><input type="radio" id="hascatssno" name="hascats" value="no"> No</label>
+				
+				</div><!-- closes row -->
+
+			</fieldset><!--Closes Your Basic Information -->
+
+			<!-- ========================================================= -->
+
+			<fieldset>
+				<h3><span class="form-step">2</span>Your Personal Information</h3>
+
+				<div class="row">
+					<div class="item">
+						<label for="dobitem">Date of Birth:</label>
+						<input type="date" name="dob" id="dobitem"/>
+					</div>
+
+					<div class="item">
+						<label for="ssnitem">Social Security Num:</label>
+						<input type="text" name="ssn" id="ssnitem" placeholder="123-45-6789"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="dlnumitem">Driver's License Num:</label>
+						<input type="text" name="dlnum" id="dlnumitem"/>
+					</div>
+
+					<div class="item">
+						<label for="dlstitem">Driver's License State:</label>
+						<input type="text" name="dlst" id="dlstitem" list="states"/>
+						<datalist id="states">
+
+							<select>
+								<option value="AL">Alabama</option>
+								<option value="AK">Alaska</option>
+								<option value="AZ">Arizona</option>
+								<option value="AR">Arkansas</option>
+								<option value="CA">California</option>
+								<option value="CO">Colorado</option>
+								<option value="CT">Connecticut</option>
+								<option value="DE">Delaware</option>
+								<option value="DC">District Of Columbia</option>
+								<option value="FL">Florida</option>
+								<option value="GA">Georgia</option>
+								<option value="HI">Hawaii</option>
+								<option value="ID">Idaho</option>
+								<option value="IL">Illinois</option>
+								<option value="IN">Indiana</option>
+								<option value="IA">Iowa</option>
+								<option value="KS">Kansas</option>
+								<option value="KY">Kentucky</option>
+								<option value="LA">Louisiana</option>
+								<option value="ME">Maine</option>
+								<option value="MD">Maryland</option>
+								<option value="MA">Massachusetts</option>
+								<option value="MI">Michigan</option>
+								<option value="MN">Minnesota</option>
+								<option value="MS">Mississippi</option>
+								<option value="MO">Missouri</option>
+								<option value="MT">Montana</option>
+								<option value="NE">Nebraska</option>
+								<option value="NV">Nevada</option>
+								<option value="NH">New Hampshire</option>
+								<option value="NJ">New Jersey</option>
+								<option value="NM">New Mexico</option>
+								<option value="NY">New York</option>
+								<option value="NC">North Carolina</option>
+								<option value="ND">North Dakota</option>
+								<option value="OH">Ohio</option>
+								<option value="OK">Oklahoma</option>
+								<option value="OR">Oregon</option>
+								<option value="PA">Pennsylvania</option>
+								<option value="RI">Rhode Island</option>
+								<option value="SC">South Carolina</option>
+								<option value="SD">South Dakota</option>
+								<option value="TN">Tennessee</option>
+								<option value="TX">Texas</option>
+								<option value="UT">Utah</option>
+								<option value="VT">Vermont</option>
+								<option value="VA">Virginia</option>
+								<option value="WA">Washington</option>
+								<option value="WV">West Virginia</option>
+								<option value="WI">Wisconsin</option>
+								<option value="WY">Wyoming</option>
+							</select>	
+						</datalist>
+
+					</div>
+				</div><!-- closes row -->
+	
+				<div class="row">
+					<div class="item">
+						<label for="dlexpitem">Expiration Date:</label>
+						<input type="date" name="dlexp" id="dlexpitem" />
+					</div>
+				</div><!-- closes row -->
+
+			</fieldset><!--Closes Your Personal Information -->
+
+			<!-- ========================================================= -->
+
+			<fieldset>
+				<h3><span class="form-step">3</span>Employment History</h3>
+
+				<div class="row">
+					<div class="item">
+						<label for="emp1item">Current Employer:</label>
+						<input type="text" name="emp1" id="emp1item"/>
+					</div>
+
+					<div class="item">
+						<label for="occ1item">Occupation:</label>
+						<input type="text" name="occ1" id="occ1item"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item"><!-- Need to update type? -->
+						<label for="yrsemp1item">Years Employed:</label>
+						<input type="number" name="yrsemp1" id="yrsemp1item"/>
+					</div>
+
+					<div class="item">
+						<label for="sup1item">Supervisor's Name</label>
+						<input type="text" name="sup1" id="sup1item"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="sup1phitem">Supervisor's Phone Num:</label>
+						<input type="text" name="sup1ph" id="sup1phitem" placeholder="123-45-6789"/>
+					</div>
+
+					<div class="item">
+						<label for="monsal1item">Monthly Salary:</label>
+						<input type="range" name="monsal1" id="monsal1item" min="0" max="10000" value="5000" onchange="showValue(this.value)"><span id="range">$5000</span>
+					</div>
+				</div><!-- closes row -->
+
+				<hr />
+
+				<div class="row">
+					<div class="item">
+						<label for="emp2item">Previous Employer:</label>
+						<input type="text" name="emp2" id="emp2item"/>
+					</div>
+
+					<div class="item">
+						<label for="occ2item">Occupation:</label>
+						<input type="text" name="occ2" id="occ2item"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="yrsemp2item">Years Employed:</label>
+						<input type="number" name="yrsemp2" id="yrsemp2item"/>
+					</div>	
+	
+					<div class="item">
+						<label for="sup2item">Supervisor's Name</label>
+						<input type="text" name="sup2" id="sup2item"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="sup2phitem">Supervisor's Phone Num:</label>
+						<input type="text" name="sup2ph" id="sup2phitem" placeholder="123-45-6789"/>
+					</div>
+				</div><!-- closes row -->
+
+			</fieldset><!--Closes Employment History -->
+			
+			<!-- ========================================================= -->
+
+			<fieldset>
+				<h3><span class="form-step">4</span>Rental History</h3>
+
+				<div class="row">
+					<div class="item">
+						<label for="presadditem">Present Address:</label>
+						<input type="text" name="presadd" id="presadditem"/>
+					</div>
+
+					<div class="item">
+						<label for="prescityitem">City:</label>
+						<input type="text" name="prescity" id="prescityitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="presstitem">State:</label>
+						<input type="text" name="presst" id="presstitem" list="states"/>
+					</div>
+
+					<div class="item">
+						<label for="preszipitem">Zip:</label>
+						<input type="number" name="preszip" id="preszipitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="presyrsitem">Years at Address:</label>
+						<input type="number" name="presyrs" id="presyrsitem"/>
+					</div>
+
+					<div class="item">
+						<label for="presllitem">Landlord's Name:</label>
+						<input type="text" name="presll" id="presllitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="presllphitem">Landlord's Phone Num:</label>
+						<input type="text" name="presllph" id="presllphitem" placeholder="123-45-6789"/>
+					</div>
+				</div><!-- closes row -->
+
+			
+				<hr />
+
+				<div class="row">
+					<div class="item">
+						<label for="prevadditem">Previous Address:</label>
+						<input type="text" name="prevadd" id="prevadditem"/>
+					</div>
+
+					<div class="item">
+						<label for="prevcityitem">City:</label>
+						<input type="text" name="prevcity" id="prevcityitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="prevstitem">State:</label>
+						<input type="text" name="prevst" id="prevstitem" list="states"/>
+					</div>
+
+					<div class="item">
+						<label for="prevzipitem">Zip:</label>
+						<input type="number" name="prevzip" id="prevzipitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="prevyrsitem">Years at Address:</label>
+						<input type="number" name="prevyrs" id="prevyrsitem"/>
+					</div>
+
+					<div class="item">
+						<label for="prevllitem">Landlord's Name:</label>
+						<input type="text" name="prevll" id="prevllitem"/>
+					</div>
+				</div><!-- closes row -->
+
+				<div class="row">
+					<div class="item">
+						<label for="prevllphitem">Landlord's Phone Num:</label>
+						<input type="text" name="prevllph" id="prevllphitem" placeholder="123-45-6789"/>
+					</div>
+				</div><!-- closes row -->
+
+			</fieldset><!--Closes Rental History -->
+
+			<fieldset>
+				<h3><span class="form-step">5</span>Consent and Comments</h3>
+
+				<div class="row">
+					
+						<label><input type="checkbox" name="consent"/> I consent to Rhodes Realty performing a credit inquiry</label>
+					
+				</div><!-- Closes row -->
+
+				<div class="row">
+					<p>Additional Comments:</p>
+					<textarea name="comments" rows="4">Enter your comments</textarea>	
+				</div><!-- Closes row -->
+
+			</fieldset><!-- Closes Consent & Comments -->
+
+
+			<input type="submit"  value="Submit" class="button"/>
+
+		</form><!--Closes form-->
+
+	</div><!--Closes featurette-->
+
+	<img src="images/bottom_left_art.png" alt="decoration" id="bot-left"/>
+	<img src="images/bottom_right_art.png" alt="decoration" id="bot-right" />
+
+	<footer>
+		<img src="images/star.png" alt="decoration" id="star1"/>
+		<img src="images/star.png" alt="decoration" id="star2"/>
+		<img src="images/star.png" alt="decoration" id="star3"/>
+		<div id="footer_txt">
+			<p>This is not factual real estate data; however, I actually do have my real estate license and am willing to help with referrals!<br/>&copy; 2015 Kelly Rhodes</p>
+        </div>
+	</footer><!-- Closes footer -->
+
+</body>

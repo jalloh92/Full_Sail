@@ -1,0 +1,167 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: DWS2
+	Purpose: Week 4 Assignment 
+	Site: www.teazersback.com (home css stylesheet)
+	Date: January 27, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+		(Adobe Kuler Citrus)
+/*		Light Orange	#ff6600;		 
+/*		Dark Orange		#c13b00;		 
+/*		Light Gray		#5e6d70;		 
+/*		Dark Gray		#424e4f;		 
+/*		Black			#1b1d1e;		 
+================================================== 
+
+/* Note:  I'm using a 12 column grid as my basis with 1.6% margins between the columns.
+/* 12C + 11M = 100% (12 columns plus 11 margins equals 100% width)
+/* Therefore, solving for C... each C will be 6.86667%
+/* A 1 column span will be 1C plus 0M (6.86667%)
+/* A 2 column span will be 2C plus 1M (15.33334%)
+/* A 3 column span will be 3C plus 2M (23.8000%)
+/* A 4 column span will be 4C plus 3M (32.26667%)
+/* A 5 column span will be 5C plus 4M (40.73333%)
+/* A 6 column span will be 6C plus 5M (49.20000%)
+/* A 7 column span will be 7C plus 6M (57.66667%)
+/* A 8 column span will be 8C plus 7M (66.13333%)
+/* A 9 column span will be 9C plus 8M (74.60000%)
+/* A 10 column span will be 10C plus 9M (83.06667%)
+/* A 11 column span will be 11C plus 10M (91.53333%)
+/* A 12 column span will be 12C plus 11M (100%)
+
+/* (I'm a super nerd -- just wanted to show you the math up front in case you were wondering where my numbers came from!) */
+
+
+/* --------------------------$Generic Elements 
+--------------------------------------------------- */
+body{
+	background-image: url("../images/stardust.png");
+}
+
+p{
+	font-size: 1.2em; /* 12px / 10px */
+}
+
+/* --------------------------$Positioning Elements 
+--------------------------------------------------- */
+header,#container, footer{
+	position:relative;
+	top:70px;
+}
+
+/* --------------------------$Header Elements 
+--------------------------------------------------- */
+
+#banner{
+	height: 100%;
+	border-bottom: 2px solid #ff6600; /* light orange */
+}
+
+#cta{
+	margin: 0 auto;
+	text-align: center;
+	background-image: url("../images/black_denim.png");
+	border-bottom: 2px solid #ff6600; /* light orange */
+	color: #fff;
+	padding: 30px 0 10px;
+}
+
+#cta img{
+	margin: 0 auto;
+}
+
+/* --------------------------$Container Elements 
+--------------------------------------------------- */
+#container{
+	padding:38px 0;
+}
+
+#container h2{
+	background-image: url("../images/T-circle.png");
+	background-repeat: no-repeat;
+	background-size: 29px 29px;
+}
+
+#ticket_button{
+	margin: 25px auto;
+	text-align: center;
+}
+
+#ticket_button a{
+	margin: 0 auto;
+	border: 1px solid #fff;
+	padding: 10px 1.6%;
+	border-radius: 5px;
+	text-decoration: none;
+	background-color: #424e4f; /*dark gray */
+	color: #ff6600; /* light orange */
+	font-size: 1.6em; /* 16px / 18px */
+}
+
+#ticket_button a:hover{
+	background-color:#ff6600; /* light orange */
+	color: #424e4f; /*dark gray */
+}
+
+
+/* --------------------------$Table Elements 
+--------------------------------------------------- */
+
+table{
+	margin-top: 10px;
+	border: 3px solid #c13b00; /*dark orange*/
+	font-size: 1.2em; /* 12 px / 10 px */
+	width:100%;
+}
+
+th,td {
+	text-align: center;
+	padding: 5px 0;
+}
+
+tr:nth-child(2n) { /*format even rows */
+    color: #fff; /*white*/
+    background-color: #ff6600; /* light orange */
+    border-color: transparent;
+}
+
+tr:nth-child(2n+1) { /*format odd rows */
+    color: #fff; /*white*/
+    background-color: #424e4f; /*dark gray */
+    border-color: transparent;
+}
+
+td:first-child{
+	width: 40%;
+}
+
+td:last-child{
+	width: 60%;
+}
+
+/* --------------------------$Media Queries 
+--------------------------------------------------- */
+@media screen and (max-width: 800px){
+	.left_content, .right_content{
+		float: none;
+		width: 96.8%; /* 100% minus 2*1.6% */
+	}
+
+	h1{
+		font-size: 2.0em; /* 20px / 10px */
+		padding:0;
+	}
+}
+
+
+@media screen and (min-width:100px) and (max-width: 525px){
+
+	header, footer, #container{
+		position:static;
+	}
+
+}
+

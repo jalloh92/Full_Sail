@@ -1,0 +1,278 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: DWS2
+	Purpose: Week 4 Assignment 
+	Site: www.teazersback.com (main css stylesheet)
+	Date: January 27, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+				(Adobe Kuler Citrus)
+/*		Light Orange	#ff6600;		 
+/*		Dark Orange		#c13b00;		 
+/*		Light Gray		#5e6d70;		 
+/*		Dark Gray		#424e4f;		 
+/*		Black			#1b1d1e;		 
+================================================== 
+
+/* Note:  I'm using a 12 column grid as my basis with 1.6% margins between the columns.
+/* 12C + 11M = 100% (12 columns plus 11 margins equals 100% width)
+/* Therefore, solving for C... each C will be 6.86667%
+/* A 1 column span will be 1C plus 0M (6.86667%)
+/* A 2 column span will be 2C plus 1M (15.33334%)
+/* A 3 column span will be 3C plus 2M (23.8000%)
+/* A 4 column span will be 4C plus 3M (32.26667%)
+/* A 5 column span will be 5C plus 4M (40.73333%)
+/* A 6 column span will be 6C plus 5M (49.20000%)
+/* A 7 column span will be 7C plus 6M (57.66667%)
+/* A 8 column span will be 8C plus 7M (66.13333%)
+/* A 9 column span will be 9C plus 8M (74.60000%)
+/* A 10 column span will be 10C plus 9M (83.06667%)
+/* A 11 column span will be 11C plus 10M (91.53333%)
+/* A 12 column span will be 12C plus 11M (100%)
+
+/* (I'm a super nerd -- just wanted to show you the math up front in case you were wondering where my numbers came from!) */
+
+/* --------------------------$Generic Page Elements 
+--------------------------------------------------- */
+	
+*{
+	-webkit-transition all 1s; /* will apply 1s transition to all elements as part of RWD */
+	-moz-transition all 1s;
+	-ms-transition all 1s;
+	-o-transition all 1s;
+	transition all 1s;
+}
+
+body{ 
+	margin: 0;
+	padding: 0;	
+	font: 62.5%/1.5 font-family: "Courier New", Courier, monospace/* font is 10px based */
+}
+
+img{
+	max-width: 100%;
+	display:block;
+}
+
+h1{
+	color:#ff6600; /* light orange */
+	font-size: 2.4em; /* 24px / 10px */
+	padding-left: 1.6%;
+}
+
+p, li{
+	color: #fff;
+	line-height: 120%;
+}
+
+/* --------------------------$Container Elements 
+--------------------------------------------------- */
+
+#container{
+	width: 83.06667%; /* 10 column span */
+	max-width: 960px;
+	margin: 0 auto;
+	padding-top: 70px;
+	background-color: rgba(94,109,112,0.5); /* Light Gray at 50% opacity */
+	-moz-box-shadow: 0 0 10px #777777;
+	-webkit-box-shadow: 0 0 10px #777777; 
+	box-shadow: 0 0 10px #777777;
+}
+
+
+#container:after { /* css tricks clearfix so container will hold the floated objects */
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.left_content{
+	float:left;
+	width: 46.0%; /* 6 column span (49.2%) subtract 1.6%*2 for padding */
+	padding: 0 1.6%;
+	margin:0;
+}
+
+.right_content{
+	float:right;
+	width: 46.0%; /* 6 column span (49.2%) subtract 1.6%*2 for padding */
+	padding: 0 1.6%;
+	margin:0;
+}
+
+#container h2{
+	color:#ff6600; /* light orange */
+	text-shadow: 1px 1px 3px #1b1d1e;
+	font-size: 1.8em; /* 18px / 10px */
+	padding-left: 35px;
+}
+
+/* --------------------------$Navigation 
+--------------------------------------------------- */
+@font-face {
+  font-family: "Freakshow"; /* font courtesy of fontspace.com */
+  src: url("../fonts/Carnevalee_Freakshow.ttf");
+}
+
+nav{
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: 2;
+  	width: 100%;
+	padding: 10px 0;
+	background-color: #424e4f; /* dk gray */
+	border-bottom: 3px solid #ff6600; /* light orange */
+}
+
+nav ul{
+	list-style-type: none;
+	padding:0;
+	margin: 10px auto;
+	width: 100%;
+	overflow:hidden;
+}
+
+nav li{
+	float: left;
+	width: 15.33334%;  /* 2 column span */
+	margin-right: 1.6%;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+nav a{
+	line-height:30px;
+	display:block;
+	color: #fff; /* white */
+	font-size: 1.8em; /* 18px / 10px */
+	font-family: "Freakshow";
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #ff6600; /* light orange */
+}
+
+/* --------------------------$Footer 
+--------------------------------------------------- */
+
+footer{
+	background-color: #424e4f; /* dk gray */
+	border-top: 3px solid #ff6600; /* light orange */
+	padding: 10px 0;
+	color: #fff;
+	text-align: center;
+	position:relative;
+	clear:both;
+	
+}
+
+footer p {
+	font-size: .8em; /* 8px / 10px */
+}
+
+#social_media { 
+	position: absolute; 
+	bottom: 10px;
+	right:0px;
+	margin-right: 1.6%;
+}
+
+#social_media ul {
+	padding:0; 
+	margin:0 auto;
+}
+
+#social_media li {
+	float:right; 
+	list-style:none; 
+	margin-left:5px;
+}
+
+#social_media span { 
+	float:left; 
+}
+
+#social_media img{
+	border: none;
+}
+
+/* --------------------------$Media Queries 
+--------------------------------------------------- */
+@media screen and (max-width: 960px){
+	#container {
+		padding-top:70px;
+		width:100%;
+	}
+}	
+
+@media screen and (min-width:100px) and (max-width: 525px){
+	
+	#container {
+		padding-top:0px;
+	}
+
+	nav, #container, footer, #social_media{
+		position: static;
+	}
+
+	nav{
+		padding: 5px 0;
+	}
+	
+	nav li{
+		float:none; 
+		width:100%;
+	}
+		
+	nav a{
+		height:50px;
+		line-height: 50px;
+	}	
+	
+	nav ul{
+		width:100%;
+	}
+		
+	nav a:hover{
+		background-color: #ff6600; /* light orange */
+		color: #424e4f; /* dk gray */
+	}
+
+	h1{
+		font-size: 1.8em; /* 18px / 10px */
+		padding:0;
+	}
+
+	h2{
+		font-size: 1.6em; /* 16px / 10px */
+	}
+
+	#social_media { 
+		margin: 0 auto;
+	}
+
+	#social_media ul, #social_media span {
+		float:none;
+		margin:0 auto;
+	}
+
+	#social_media ul{
+		height: 30px;
+		padding-top: 15px;
+	}
+
+	#social_media li{
+		float:none;
+		display: inline-block;
+	}
+
+}
+
+

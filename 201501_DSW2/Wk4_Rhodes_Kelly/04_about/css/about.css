@@ -1,0 +1,229 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: DWS2
+	Purpose: Week 4 Assignment 
+	Site: www.teazersback.com (about css stylesheet)
+	Date: January 27, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+		(Adobe Kuler Citrus)
+/*		Light Orange	#ff6600;		 
+/*		Dark Orange		#c13b00;		 
+/*		Light Gray		#5e6d70;		 
+/*		Dark Gray		#424e4f;		 
+/*		Black			#1b1d1e;		 
+================================================== 
+
+/* Note:  I'm using a 12 column grid as my basis with 1.6% margins between the columns.
+/* 12C + 11M = 100% (12 columns plus 11 margins equals 100% width)
+/* Therefore, solving for C... each C will be 6.86667%
+/* A 1 column span will be 1C plus 0M (6.86667%)
+/* A 2 column span will be 2C plus 1M (15.33334%)
+/* A 3 column span will be 3C plus 2M (23.8000%)
+/* A 4 column span will be 4C plus 3M (32.26667%)
+/* A 5 column span will be 5C plus 4M (40.73333%)
+/* A 6 column span will be 6C plus 5M (49.20000%)
+/* A 7 column span will be 7C plus 6M (57.66667%)
+/* A 8 column span will be 8C plus 7M (66.13333%)
+/* A 9 column span will be 9C plus 8M (74.60000%)
+/* A 10 column span will be 10C plus 9M (83.06667%)
+/* A 11 column span will be 11C plus 10M (91.53333%)
+/* A 12 column span will be 12C plus 11M (100%)
+
+/* (I'm a super nerd -- just wanted to show you the math up front in case you were wondering where my numbers came from!) */
+
+
+/* --------------------------$Generic Page Elements 
+--------------------------------------------------- */
+
+body{
+	background-image: url("../images/gun_metal.png"); /* courtesy of subtlepatterns.com */
+}
+
+
+#container h2{
+	background-image: url("../images/T-circle.png");
+	background-repeat: no-repeat;
+	background-size: 29px 29px;
+}
+
+#row1, #row2{
+	clear:both;
+}
+
+/* --------------------------$Row 1 Content 
+--------------------------------------------------- */
+
+#row1 img{
+	margin: 0 auto;
+	padding-top: 16px;
+}
+
+#we_are{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#we_are h2{
+	padding: 0;
+	background-image: none;
+	margin-bottom:5px;
+}
+
+#we_are ul{
+	margin-top: 0;
+}
+
+#we_are li{
+	list-style-type: none;
+}
+
+
+/* --------------------------$Row2 Elements (Form)
+--------------------------------------------------- */
+#row2 p, #row2 a{
+	font-size: 1.2em; /* 12px / 10px */
+}
+
+#row2 a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#row2 a:hover{
+	color: #ff6600; /*Light Orange */
+}
+
+.item{
+	width: 100%;
+	margin-bottom: 12px;
+}
+
+label {
+	font-size: 1.2em; /* 16px / 10px */;
+	color: #ff6600; /*Light Orange */
+	width: 100%;
+	text-align: left;
+	padding-bottom: 3px;
+	display:block;
+}
+
+
+input[type=text], input[type=email] {
+	display:block;
+	width:91.5337%; /* span 11 columns of parent element (item) */
+	padding: 4px 0 4px 1%;
+	background: #fff; /* White */
+	font-size: 1.4em; /* 14px / 10px */;
+	color: #424e4f; /* Dark Gray */
+	border: 1px solid #424e4f; /* Dark Gray */
+}
+
+input:focus, textarea:focus{
+	outline: solid #c13b00; /* Dark Orange */
+}
+
+input.button{
+	float: right;
+	margin-bottom: 15px;
+
+	font-size: 1.2em; /* 12px / 10px */
+	background-color:  #ff6600; /*Light Orange */
+	color: #424e4f; /* Dark Gray */
+	border: 2px solid #c13b00; /* Dark Orange */
+	padding: 1%;
+
+	cursor: pointer;
+}
+
+input.button:hover{
+	background-color: #424e4f; /* Dark Gray */
+	color:  #ff6600; /*Light Orange */
+}
+
+/* --------------------------$Media Queries 
+--------------------------------------------------- */
+@media screen and (max-width: 800px){
+
+	#row1 img{
+		float:left;
+		width: 46.0%; /* 6 column span (49.2%) subtract 1.6%*2 for padding */
+		padding: 0 1.6%;
+		margin:0;
+	}
+
+	#row1 .left_content, #row1 .right_content{
+		float: none;
+		width: 96.8%; /* 100% minus 2*1.6% */
+	}
+
+	#row1 .right_content ul, #row1 .right_content h2{
+		float:right;
+		width: 46.0%; /* 6 column span (49.2%) subtract 1.6%*2 for padding */
+		padding: 0 1.6%;
+		margin:0;
+	}
+
+	#row1 .right_content h2{
+		padding-top: 50px;
+	}
+}
+
+@media screen and (max-width: 675px){
+	#row2 img{
+		display: none;
+	}
+
+	#row2 .left_content, #row2 .right_content{
+		float: none;
+		width: 96.8%; /* 100% minus 2*1.6% */
+	}
+
+	input.button{
+		float: none;
+		margin: 2px auto 15px;
+		width:49.2%;/* 10 col span */
+
+	}
+}
+
+
+
+@media screen and (max-width: 610px){
+	#row1 .right_content ul, #row1 .right_content h2{
+		float:none;
+		width: 96.8%; /* 100% minus 2*1.6% */
+		padding: 0 1.6%;
+		margin:0;
+	}
+
+	ul{
+		padding-left:0;
+	}
+
+	#row1 img {
+		display:none;
+	}
+
+	
+
+	#row2 p, #row2 a{
+		font-size: 1.0em; 
+	}
+
+	#we_are li{
+		font-size: .9em;
+	}
+
+	#container h2{
+		font-size: 1.4em;
+		height: 30px;
+	}
+
+	h1{
+		margin-left: 1.6%;
+	}
+
+}

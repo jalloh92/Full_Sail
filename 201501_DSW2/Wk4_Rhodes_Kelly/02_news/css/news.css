@@ -1,0 +1,90 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: DWS2
+	Purpose: Week 4 Assignment 
+	Site: www.teazersback.com (news css stylesheet)
+	Date: January 27, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+		(Adobe Kuler Citrus)
+/*		Light Orange	#ff6600;		 
+/*		Dark Orange		#c13b00;		 
+/*		Light Gray		#5e6d70;		 
+/*		Dark Gray		#424e4f;		 
+/*		Black			#1b1d1e;		 
+================================================== 
+
+/* Note:  I'm using a 12 column grid as my basis with 1.6% margins between the columns.
+/* 12C + 11M = 100% (12 columns plus 11 margins equals 100% width)
+/* Therefore, solving for C... each C will be 6.86667%
+/* A 1 column span will be 1C plus 0M (6.86667%)
+/* A 2 column span will be 2C plus 1M (15.33334%)
+/* A 3 column span will be 3C plus 2M (23.8000%)
+/* A 4 column span will be 4C plus 3M (32.26667%)
+/* A 5 column span will be 5C plus 4M (40.73333%)
+/* A 6 column span will be 6C plus 5M (49.20000%)
+/* A 7 column span will be 7C plus 6M (57.66667%)
+/* A 8 column span will be 8C plus 7M (66.13333%)
+/* A 9 column span will be 9C plus 8M (74.60000%)
+/* A 10 column span will be 10C plus 9M (83.06667%)
+/* A 11 column span will be 11C plus 10M (91.53333%)
+/* A 12 column span will be 12C plus 11M (100%)
+
+/* (I'm a super nerd -- just wanted to show you the math up front in case you were wondering where my numbers came from!) */
+
+/* --------------------------$Generic Page Elements 
+--------------------------------------------------- */
+body{
+	background-image: url("../images/carbon_fibre.png"); /* courtesy of subtlepatterns.com */
+}
+
+#banner{
+	height: 100%;
+	border-bottom: 2px solid #ff6600; /* light orange */
+}
+
+#container h2{
+	background-image: url("../images/T-circle.png");
+	background-repeat: no-repeat;
+	background-size: 29px 29px;
+}
+
+/* --------------------------$Video Elements 
+--------------------------------------------------- */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* --------------------------$Media Queries 
+--------------------------------------------------- */
+@media screen and (max-width: 800px){
+	.left_content, .right_content{
+		float: none;
+		width: 96.8%; /* 100% minus 2*1.6% */
+	}
+
+	h1{
+		margin-left: 1.6%;
+		font-size: 2.0em; /* 20px / 10px */
+		padding:0;
+	}
+}
+
+@media screen and (min-width:100px) and (max-width: 510px){
+	.right_content p{
+		margin-bottom: 0;
+		padding-bottom: 10px;
+	}
+}

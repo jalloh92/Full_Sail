@@ -1,0 +1,253 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: DWS2
+	Purpose: Week 4 Assignment 
+	Site: www.teazersback.com (gallery css stylesheet)
+	Date: January 27, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+		(Adobe Kuler Citrus)
+/*		Light Orange	#ff6600;		 
+/*		Dark Orange		#c13b00;		 
+/*		Light Gray		#5e6d70;		 
+/*		Dark Gray		#424e4f;		 
+/*		Black			#1b1d1e;		 
+================================================== 
+
+/* Note:  I'm using a 12 column grid as my basis with 1.6% margins between the columns.
+/* 12C + 11M = 100% (12 columns plus 11 margins equals 100% width)
+/* Therefore, solving for C... each C will be 6.86667%
+/* A 1 column span will be 1C plus 0M (6.86667%)
+/* A 2 column span will be 2C plus 1M (15.33334%)
+/* A 3 column span will be 3C plus 2M (23.8000%)
+/* A 4 column span will be 4C plus 3M (32.26667%)
+/* A 5 column span will be 5C plus 4M (40.73333%)
+/* A 6 column span will be 6C plus 5M (49.20000%)
+/* A 7 column span will be 7C plus 6M (57.66667%)
+/* A 8 column span will be 8C plus 7M (66.13333%)
+/* A 9 column span will be 9C plus 8M (74.60000%)
+/* A 10 column span will be 10C plus 9M (83.06667%)
+/* A 11 column span will be 11C plus 10M (91.53333%)
+/* A 12 column span will be 12C plus 11M (100%)
+
+/* (I'm a super nerd -- just wanted to show you the math up front in case you were wondering where my numbers came from!) */
+
+/* --------------------------$Generic Page Elements 
+--------------------------------------------------- */
+body{
+	background-image: url("../images/bkg_wild_oliva.png"); /* courtesy of subtlepatterns.com */
+}
+
+/* --------------------------$Top Section Elements 
+--------------------------------------------------- */
+#top_section{
+	padding-top: 30px;
+	color: #fff;
+}
+
+#top_section h1{
+	font-size: 3.6em; /* 36 px / 10px */
+	margin: 0 0 5px;
+}
+
+#container h2{
+	background-image: url("../images/T-circle.png");
+	background-repeat: no-repeat;
+	background-size: 29px 29px;
+	margin: 0 1.6%;
+}
+
+hr{
+	margin: 3px 1.6%;
+}
+
+/* --------------------------$Image Elements 
+--------------------------------------------------- */
+#photos{
+	margin: 0 auto;
+}
+
+.photo_box{
+	background:none;
+	display: inline;
+	float: left;
+	width: 32.26667%; /* 4 col span -- will get 3 photos across */
+}
+
+.photo_box:nth-child(3n-2) {
+	margin-left:1.6%;
+}
+
+.polaroid {
+	background: none repeat scroll 0% 0% #FFF;
+	width: auto;
+	padding: 10px 10px 15px;
+	text-align: center;
+	font-family: "Marker Felt",sans-serif;
+	text-decoration: none;
+	color: #333;
+	font-size: 18px;
+	
+	transform: rotate(-2deg);
+}
+
+.polaroid img{
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+/* -------------- Rotate & Scale Images --------------*/
+/* Shout out to Zurb for their code on polaroid rotation */
+/* By default, all images initially tilted -2 degrees */
+.photo_box {
+  	-webkit-transform: rotate(-2deg);
+  	-moz-transform: rotate(-2deg);
+
+  	-webkit-transition: all .5s ease-in .1s;
+	-moz-transition: all .5s ease-in .1s;
+	-ms-transition: all .5s ease-in .1s;
+	-o-transition: all .5s ease-in .1s;
+	transition: all .5s ease-in .1s;
+}
+ 
+/* Rotate all even images 2 degrees */
+.photo_box:nth-child(even){
+ 	-webkit-transform: rotate(2deg);
+  	-moz-transform: rotate(2deg);
+}
+ 
+/* Don't rotate every third image, but offset its position */
+.photo_box:nth-child(3n)  {
+  	-webkit-transform: none;
+  	-moz-transform: none;
+  	position: relative;
+  	top: -5px;
+}
+ 
+/* Rotate every fifth image by 5 degrees and offset it */
+.photo_box:nth-child(5n) {
+  	-webkit-transform: rotate(5deg);
+  	-moz-transform: rotate(5deg);
+  	position: relative;
+  	right: 5px;
+}
+ 
+/* Keep default rotate for every eighth, but offset it */
+.photo_box:nth-child(8n){
+  	position: relative;
+  	top: 8px;
+  	right: 5px;
+}
+ 
+/* Keep default rotate for every eleventh, but offset it */
+.photo_box:nth-child(11n) {
+  	position: relative;
+  	top: 3px;
+  	left: -5px;
+}
+
+/* Scale the images on hover, add transitions for smoothing things out, 
+and ensure the hover appears on top */
+.photo_box:hover{
+	-webkit-transform: scale(1.25) rotate(2deg);
+	-moz-transform: scale(1.25) rotate(2deg);
+	position: relative;
+	z-index: 10;
+}
+
+.photo_box:hover .polaroid{
+	-moz-box-shadow: 0 0 5px #ff6600; /* light orange */
+	-webkit-box-shadow: 0 0 5px #ff6600; /* light orange */
+	box-shadow: 0 0 5px #ff6600; /* light orange */
+}
+
+/* --------------------------$Media Queries 
+--------------------------------------------------- */
+
+@media screen and (max-width: 830px){
+	#top_section{
+		padding-top: 20px;
+	}
+
+	.photo_box{
+		margin:0;
+		width: 46.0%; /* 6 column span (49.2%) subtract 1.6%*2 for padding -- will get 2 photos across */
+	}
+
+	.photo_box:nth-child(3n-2) {
+		margin-left:0 auto;
+	}
+
+	.photo_box img{
+		margin:0;
+	}
+
+	  .polaroid{
+  		width: 200px;
+  		margin: 20px auto;
+  	}
+
+  	#container h2{
+  		font-size: 1.6em;
+  		height: 30px;
+  	}
+
+}
+
+@media screen and (max-width: 540px){
+	h2, hr{
+		display:none;
+	}
+
+
+@media screen and (min-width:100px) and (max-width: 525px){
+	
+
+	.photo_box, .photo_box:nth-child(3n-2){
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.polaroid, .photo_box, .photo_box:nth-child(3n),.photo_box:nth-child(5n), .photo_box:nth-child(8n), .photo_box:nth-child(11n) {
+  		-webkit-transform: rotate(0deg);
+  		-moz-transform: rotate(0deg);
+  		transform: rotate(0deg);
+  		position: static;
+  	}
+
+  	.polaroid img{
+  		margin:0;
+  	}
+
+  	footer, #container{
+		position:static;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+
+	#container{
+		padding-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 230px){
+	.polaroid{
+	  		width: 90%;
+	  		margin: 20px 1%;
+	  		padding: 1.5% 1.5% 2%;
+	}
+}
+
+
+
+
+
+
+
+

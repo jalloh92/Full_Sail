@@ -1,0 +1,626 @@
+/* ================================================
+ 	Author: Kelly Rhodes 
+	Class: DWS2
+	Purpose: Week 3 Assignment 
+	Site: rental application (form)
+	Date: January 23, 2015
+
+/* ================================================
+					Color Swatches  
+===================================================
+	(Adobe Kuler Friends and Foes)
+	Pale Yellow:	#fffff1; 
+	Light Yellow:	#ffffa6;
+	Lime:			#bdf271;
+	Teal:			#29d9c2;
+	Dk Teal:		#01a2a6;
+	Navy:			#2f2933;
+================================================== */
+
+/* Note:  I'm using a 12 column grid as my basis with 1.6% margins between the columns.
+/* 12C + 11M = 100% (12 columns plus 11 margins equals 100% width)
+/* Therefore, solving for C... each C will be 6.86667%
+/* A 2 column span will be 2C plus 1M (15.33334%)
+/* A 3 column span will be 3C plus 2M (23.80001%)
+/* A 4 column span will be 4C plus 3M (39.4666667%)
+/* A 6 column span will be 6C plus 5M (49.20000%)
+/* A 8 column span will be 8C plus 7M (66.13336%)
+/* A 10 column span will be 10C plus 9M (83.2867%)
+/* A 11 column span will be 11C plus 10M (91.5337%)
+
+/* (I'm a super nerd -- just wanted to show you the math up front in case you were wondering where my numbers came from!) */
+
+
+
+/* ---------$Clearing out browser defaults, Reset Code 
+------------(per Lynda videos)---------------------- */
+
+form * {
+	background: transparent;
+	behavior: url(../js/PIE.htc);
+}
+
+legend {
+	display:none;
+}
+
+fieldset:before{ /* in html, <fieldset title=Section 1"> */
+	content:attr(title);
+	display:block;
+	font: 1.2em Cantarell, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	width: 80%;
+}
+
+input[type=text], input[type=password], input[type=submit], textarea, button {
+	-webkit-appearance:none;
+	-moz-appearance: none;
+	border: none;
+	background: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	padding: 0;
+	margin: 0;
+}
+
+div:not(#ray) > input[type=checkbox], div:not(#ray) > input[type=radio]{
+	display:none;
+}
+
+/* -- code to help with floated elements to keep track of heights -- */
+.group:before, .group:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.group:after {
+	clear:both;
+}
+
+.group {
+	zoom:1;
+}
+
+
+/* --------------------------$Generic Page Elements 
+--------------------------------------------------- */
+	
+*{
+	-webkit-transition all 1s; /* will apply 1s transition to all elements as part of RWD */
+	-moz-transition all 1s;
+	-ms-transition all 1s;
+	-o-transition all 1s;
+	transition all 1s;
+}
+
+body{
+	font: 62.5%/1.5 "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; /* font is 10px based */
+	background-color: #fffff1; /* Pale Yellow */
+}
+
+img{
+	max-width: 100%;
+	display:block;
+}
+
+hr{
+	width:100%;
+	margin: 15px auto;
+	border-color: #2f2933; /* Navy */
+	clear:both;
+	display: inline-block;
+}
+
+/* --------------------------$Header Elements 
+--------------------------------------------------- */
+header{ 
+	height: 400px;
+
+	/* dk teal gradient */
+	background: #00b5bf; /* Old browsers */
+	background: -moz-linear-gradient(top,  #00b5bf 0%, #01a2a6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00b5bf), color-stop(100%,#01a2a6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #00b5bf 0%,#01a2a6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #00b5bf 0%,#01a2a6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #00b5bf 0%,#01a2a6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #00b5bf 0%,#01a2a6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b5bf', endColorstr='#01a2a6',GradientType=0 ); /* IE6-9 */
+}
+
+header div{
+	width:66.13%; /* spans 8 columns */
+	margin: 0 auto;
+}
+
+#logo{ 
+	background-image: url(../images/logo.png);
+
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	position: relative;
+	top: -70px;
+	height: 70px;
+	opacity:0;
+
+	-webkit-transition-property: top, opacity;
+	-webkit-transition-duration: 3s, 4s;
+	-webkit-transition-timing-function: ease, ease;
+	-webkit-transition-delay: 0s, .5s;
+
+	-moz-transition-property: top, opacity;
+	-moz-transition-duration: 3s, 4s;
+	-moz-transition-timing-function: ease, ease;
+	-moz-transition-delay: 0s, .5s;
+
+	-ms-transition-property: top, opacity;
+	-ms-transition-duration: 3s, 4s;
+	-ms-transition-timing-function: ease, ease;
+	-ms-transition-delay: 0s, .5s;
+
+	-o-transition-property: top, opacity;
+	-o-transition-duration: 3s, 4s;
+	-o-transition-timing-function: ease, ease;
+	-o-transition-delay: 0s, .5s;
+
+	transition-property: top, opacity;
+	transition-duration: 3s, 4s;
+	transition-timing-function: ease, ease;
+	transition-delay: 0s, .5s;
+}
+
+#logo.animated{
+	opacity: 1;
+	top: 30px;
+}
+
+#header_txt{ 
+	position: relative;
+	top: 65px;
+	text-shadow: 1px 1px 0px #000;
+	color: #ffffa6; /* Light Yellow */
+
+}
+
+h1 {
+	font-size: 4.8em; /* 48px / 10px */
+	font-weight: bold;
+	margin: 0.5em 0;
+	
+}
+
+h2 {
+	font-size: 2.0em; /* 20px / 10px */
+	color: #ffffa6; /* Light Yellow */
+}
+
+/* --------------------------$Form Elements 
+--------------------------------------------------- */
+
+#featurette{
+	width:66.13%; /* spans 8 columns */
+	margin: 0 auto;
+	background-image: url(../images/ricepaper_yellow.png);
+	background-size: 100%;
+	position: relative;
+	top: -30px;
+	
+	border-top-left-radius: 10px; 
+	-moz-border-radius-top-left: 10px; 
+	-webkit-border-radius-top-left: 10px;
+	
+	border-top-right-radius: 10px; 
+	-moz-border-radius-top-right: 10px; 
+	-webkit-border-radius-top-right: 10px;
+
+	padding: 50px 0;
+
+	-moz-box-shadow: 0 0 10px #777777;
+	-webkit-box-shadow: 0 0 10px #777777;
+	box-shadow: 0 0 10px #777777;
+}
+
+
+
+form { /* form will span 6 columns of the entire page; it's parent is 8 columns. */
+		width: 74.39891124%; /* 49.20000% / 66.13% (6 cols / 8 cols) */
+		margin: 0 auto;
+}
+
+fieldset{ /*grouping for each set; while not necessary, would be handy in case I'd like to rewrite with js to hide & show fieldsets */
+	border: none;
+}
+
+.form-step{ /*stylizes the number for each step */
+	background-color:#2f2933; /* Navy */
+	color: #ffffa6; /* Light Yellow */
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+	text-align: center;
+	width: 30px; /* I am intentially not converting this to % so that the height & width stay the same size (in order to get the circle around the number) */
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 100px; /* I am intentially not converting this to % in order to get the circle around the number) */
+	margin-right: 1.6%; /* The standard margin for this page is 1.6% */
+}
+
+h3 {
+	font-size: 2.0em; /* 20px / 10px */
+	color:#2f2933; /* Navy */
+	margin: 40px auto 10px;
+}
+
+fieldset:first-of-type h3{
+	margin-top: 0;
+}
+
+.row{
+	width:100%;
+}
+
+.item{ /* each item will span 6 columns of the form (half the form), parent is row */
+	width: 49.20000%; /* In this case, we don't need to do math and can use the value from the top of the page */
+	float:left;
+	margin-bottom: 12px;
+}
+
+.item:first-child{
+	margin-right: 1.6%; /* The standard margin for this page is 1.6% */
+}
+
+label, p, #range {
+	font-size: 1.6em; /* 16px / 10px */;
+	color: #2f2933; /* Navy */
+	width: 100%;
+	text-align: left;
+	padding-bottom: 3px;
+	display:block;
+
+}
+
+#range{
+	text-align: right;
+}
+
+input[type=text], input[type=email], input[type=tel], input[type=date], input[type=number], input[type=range],textarea{
+	display:block;
+	width:91.5337%; /* span 11 columns of parent element (item) */
+	padding: 4px 0 4px 1%;
+	background: #fff; /* White */
+	font-size: 1.4em; /* 14px / 10px */;
+	color: #2f2933; /* Navy */
+	border: 1px solid #2f2933; /* Navy */
+}
+
+
+input:focus, textarea:focus{
+	outline: solid #29d9c2; /* Teal */
+}
+
+input.button{
+	float: right;
+
+	font-size: 1.6em; /* 16px / 10px */
+	background-color: #2f2933; /* Navy */
+	color: #ffffa6; /* Light Yellow */
+	border: 1px solid #2f2933; /* Navy */
+	padding: 1%;
+
+	-webkit-transition: all 1s ease 0s;
+	-moz-transition: all 1s ease 0s;
+	-ms-transition: all 1s ease 0s;
+	-o-transition: all 1s ease 0s;
+	transition: all 1s ease 0s;
+
+	cursor: pointer;
+}
+
+input.button:hover{
+	background-color: #ffffa6; /* Light Yellow */
+	color: #2f2933; /* Navy */
+	border-radius:5px;
+
+	-webkit-transform: scale(1.7);
+	-moz-transform: scale(1.7);
+	-ms-transform: scale(1.7);
+	-o-transform: scale(1.7);
+	transform: scale(1.7);
+}
+
+/* --------------------------$Fixed Images 
+--------------------------------------------------- */
+#bot-left, #bot-right{
+	position:fixed;
+	bottom: 0;
+	z-index: 1;
+	height: 150px;
+}
+
+#bot-left{
+	left:5px;
+}
+
+#bot-right{
+	right:5px;
+}
+
+
+/* --------------------------$Footer Elements 
+--------------------------------------------------- */
+footer{
+	background-color: #2f2933; /* Navy */
+	color:#ffffa6; /* Light Yellow */
+	text-align: center;
+	height: 200px;
+	width: 100%;
+	position:relative;
+}
+
+#star1, #star2, #star3{
+	position: absolute;
+	-webkit-transition: all 1s ease-in .1s;
+	-moz-transition: all 1s ease-in .1s;
+	-ms-transition: all 1s ease-in .1s;
+	-o-transition: all 1s ease-in .1s;
+	transition: all 1s ease-in .1s;
+}
+
+#star1{
+	top: 25px;
+	left: 200px;
+}
+
+#star1:hover{
+	-webkit-transform: skew(10deg, 30deg);
+	-moz-transform: skew(10deg, 30deg);
+	-ms-transform: skew(10deg, 30deg);
+	-o-transform: skew(10deg, 30deg);
+	transform: skew(10deg, 30deg);
+}
+
+#star2{
+	top: 15px;
+	left: 250px;
+}
+
+#star2:hover{
+	-webkit-transform: translate(300px, 0px);
+	-moz-transform: translate(300px, 0px);
+	-ms-transform: translate(300px, 0px);
+	-o-transform: translate(300px, 0px);
+	transform: translate(300px, 0px);
+}
+
+#star3{
+	top: 25px;
+	right: 200px;
+}
+
+#star3:hover{
+	-webkit-transform: rotate(720deg);
+	-moz-transform: rotate(720deg);
+	-ms-transform: rotate(720deg);
+	-o-transform: rotate(720deg);
+	transform: rotate(720deg);
+}
+
+#footer_txt{
+	margin: 0px auto;
+	bottom: 25px;
+	width:66.13336%; /*8 columns */
+}
+
+#footer_txt p{
+	color:#ffffa6; /* Light Yellow */;
+	text-align: center;
+	font-size: 1.2em; /*12px / 10px */
+	padding-top: 100px;
+}
+
+/* --------------------------$Media Query Elements 
+--------------------------------------------------- */
+
+@media screen and (min-width: 800px) and (max-width: 960px){ /* tablet-ish */
+	body{
+		background-image: url(../images/ricepaper_yellow.png);
+		background-size: 100%;
+	}
+
+	header{
+		position: absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		width: 23.80001%; /* 3 columns */
+		padding-bottom: 2000px;
+	}
+
+	#logo, #header_txt{
+		width:91.5337%; /* 11 columns */
+	}
+
+	h1{
+		font-size: 3.2em; /* 32pt / 10pt */
+	}
+
+	#featurette{
+		position:absolute;
+		top:0;
+		right:0;
+		margin:0;
+		width: 76.19999%; /* 9 columns */
+
+		border-top-left-radius: 0; 
+		-moz-border-radius-top-left: 0; 
+		-webkit-border-radius-top-left: 0;
+	
+		border-top-right-radius: 0; 
+		-moz-border-radius-top-right: 0; 
+		-webkit-border-radius-top-right: 0;
+
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	#bot-left{
+		left:20px;
+	}
+
+	#bot-right{
+		display:none;
+	}
+
+	#star3{
+	right: 50px;
+	}
+
+	footer{
+		position: absolute;
+		bottom: -1800px;
+	}
+
+	#footer_txt{
+		margin-right: 0px;
+		padding-right: 1.6%;
+	}
+
+} /* end tablet-ish media query */
+
+@media screen and (min-width:500px) and (max-width:800px){ /* landscape phone */
+	body{
+		background-image: url(../images/ricepaper_yellow.png);
+		background-size: 100%;
+	}	
+
+	header{
+		height: 400px;
+	}
+
+	#featurette{
+		width: 100%;
+
+		border-top-left-radius: 0; 
+		-moz-border-radius-top-left: 0; 
+		-webkit-border-radius-top-left: 0;
+	
+		border-top-right-radius: 0; 
+		-moz-border-radius-top-right: 0; 
+		-webkit-border-radius-top-right: 0;
+
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+
+		position: static;
+	}
+
+	#bot-left,#bot-right{
+		display:none;
+	}
+
+	#star1, #star2, #star3{
+		display: none;
+	}
+
+	footer{
+		height: 100px;
+	}
+
+	#footer_txt{
+		position: static;
+		width: 50%;
+	}
+
+	#footer_txt p{
+		padding: 10px 0;
+		margin: 0 auto;
+	}	
+
+}/* end landscape phone media query */
+
+
+@media screen and (min-width: 100px) and (max-width:500px){ /* portrait phone */
+
+	body{
+		background-image: url(../images/ricepaper_yellow.png);
+		background-size: 100%;
+	}	
+
+	header{
+		height:300px;
+	}
+
+	#logo{
+		margin: 0 auto;
+		width:150px;
+	}
+
+	#header_txt{ 
+		position: relative;
+		top: 50px;
+		width:100%;
+	}
+
+	h1,h2{
+		margin: 0 auto;
+		width:96.8%;
+		padding: 0 1.6%;
+		text-align:center;
+	}
+
+	h1{
+		font-size: 3.2em; /* 32pt / 10pt */
+	}
+
+	#featurette{
+		width: 100%;
+
+		border-top-left-radius: 0; 
+		-moz-border-radius-top-left: 0; 
+		-webkit-border-radius-top-left: 0;
+	
+		border-top-right-radius: 0; 
+		-moz-border-radius-top-right: 0; 
+		-webkit-border-radius-top-right: 0;
+
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+
+		position: static;
+	}
+
+	.item{ 
+		width: 100%; 
+		float:none;
+	}
+
+	#bot-left,#bot-right{
+		display:none;
+	}
+
+	#star1, #star2, #star3{
+		display: none;
+	}
+
+	footer{
+		height: 100px;
+	}
+
+	#footer_txt{
+		position: static;
+		width: 100%;
+	}
+
+	#footer_txt p{
+		padding: 10px 10%;
+		margin: 0 auto;
+		width: 80%;
+	}
+
+
+
+}/* end portrait phone media query */
