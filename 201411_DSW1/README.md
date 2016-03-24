@@ -1,3 +1,3 @@
-# Programming Web Applications
-October 2014
-Beginning Javascript with HTML.  Also introduces JSON.
+# Designing for Web Standards 1
+* November 2014
+* Beginning HTML & CSS

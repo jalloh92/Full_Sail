@@ -1,3 +1,3 @@
-# Programming Web Applications
-October 2014
-Beginning Javascript with HTML.  Also introduces JSON.
+# Designing for Web Standards II
+* January 2015
+* Advanced HTML & CSS.  Introduced Jekyl, Bootstrap, Reseponsive Web Design, and Skeleton.

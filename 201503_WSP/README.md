@@ -1,2 +1,3 @@
-# rhodes_kelly_pwa2
-Programming for Web Applications II, February 2015
+# Web Standards Project
+* March 2015
+* Introduction to Sass / Bourbon, GH Pages, Compass, Mix-ins
