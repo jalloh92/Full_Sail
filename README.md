@@ -1,5 +1,5 @@
 # Private
-Private repo for Full Sail Assignments
+Repo for Full Sail Assignments
 
 ## [Web Programming Fundamentals](https://github.com/karhodes/private/tree/master/201409_WPF)
 * August 2014
@@ -31,7 +31,8 @@ Private repo for Full Sail Assignments
 
 ## [Advanced Server Side Languages](https://github.com/karhodes/private/tree/master/201509_ASL)
 * August 2015
-* CakePHP project for development Bill of Materials
+* CakePHP project for development bill of materials
+* [FieldFinder](https://github.com/jdcarroll/fieldfinder) was a MEAN stack application done as a group project
 
 ## [Mobile Device Deployment](https://github.com/karhodes/private/tree/master/2016_MDD)
 * February 2016
