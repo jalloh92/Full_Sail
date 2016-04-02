@@ -1,0 +1,147 @@
+/* Color Scheme */
+/* Pale Yellow: #FFFFCC; */
+/* Light Pink: #FF99CC; */
+/* Yellow: #FFFF99; */
+/* Hot Pink: #FF3399; */
+/* Burgendy: #663333; */
+
+/* ------------ Generic Body Styles ------------------------ */
+body{
+	background-image: url("../img/confectionary_pink.png");
+	margin: 0;
+	font-family: 'Architects Daughter', cursive;
+	color: #663333;
+}
+
+#container{
+	width: 70%;
+	margin: 10px auto;
+	background-color: #FFFFCC;
+	padding: 10px;
+
+	-moz-box-shadow: 1px 1px 2px #663333;
+	-o-box-shadow: 1px 1px 2px #663333;
+	box-shadow: 1px 1px 2px #663333;
+
+	overflow: hidden;
+}
+
+#logo_holder, #button_holder{
+	margin:0 auto;
+	width: 50%;
+}
+
+#logo{
+	width:100%;
+}
+
+hr{
+	border-color: #663333;
+	-moz-box-shadow: 1px 1px 2px #663333;
+	-o-box-shadow: 1px 1px 2px #663333;
+	box-shadow: 1px 1px 2px #663333;
+	margin:0 auto;
+	width: 90%;
+}
+
+#button_holder{
+	margin-top: 40px;
+	text-align: center;
+}
+
+.button_like, button{
+	margin-top: 10px;
+	font-size: 16px;
+	font-family: 'Architects Daughter', cursive;
+	height: 40px;
+	border: 1px solid #663333;
+	-moz-box-shadow: 1px 1px 2px #663333;
+	-o-box-shadow: 1px 1px 2px #663333;
+	box-shadow: 1px 1px 2px #663333;
+	background-color: #ff99cc;
+	color: #ffff99;
+	padding: 10px;
+	border-radius: 10px;
+	text-decoration: none;
+}
+
+.button_like:hover, button:hover{
+	background-color: #ff3399;
+}
+
+#menu, form, #details{
+	width: 90%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+footer p{
+	text-align: center;
+	margin:20px auto;
+}
+
+/* ------------ Menu Styles ------------------------ */
+
+.cupcake_item{
+	border-top: 2px solid #663333;
+	clear:both;
+}
+
+.cupcake_item_left{
+	width: 60%;
+	float: left;
+	margin: 20px 0;
+	height: 50px;
+}
+
+.cupcake_item_right{
+	width: 35%;
+	float:right;
+	text-align: right;
+	padding-top: 10px;
+	height: 50px;
+	margin: 20px 0;
+}
+
+/* ------------ Form Styles ------------------------ */
+
+form{
+	border: 1px solid #663333;
+	-moz-box-shadow: 1px 1px 2px #663333;
+	-o-box-shadow: 1px 1px 2px #663333;
+	box-shadow: 1px 1px 2px #663333;
+	background-color: rgba(255,255,153,0.4);
+	margin: 40px auto;
+}
+
+.form_row{
+	clear:both;
+	padding: 5px 0;
+}
+
+.form_left{
+	float:left;
+	width: 25%;
+	margin:0;
+}
+
+.form_right{
+	border: 1px solid #663333;
+}
+
+/* ------------ Details Styles ------------------------ */
+
+#details_left{
+	float: left;
+	width: 30%;
+}
+
+#details_left img{
+	width:100%;
+}
+
+#details_right{
+	float:right;
+	text-align: left;
+	width: 65%;
+}

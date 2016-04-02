@@ -25,6 +25,10 @@ Repo for Full Sail Assignments
 * March 2015
 * Introduction to Sass / Bourbon, GH Pages, Compass, Mix-ins
 
+## [Front End Frameworks](https://github.com/karhodes/private/tree/master/201504_FEF)
+ * April 2015
+ * Introduction to AngularJS
+
 ## [Design Patterns for Web Programming](https://github.com/karhodes/private/tree/master/201505_DWP)
 * May 2015
 * Object-Orientated Programming using Python

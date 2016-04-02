@@ -1,0 +1,11 @@
+
+<!-- Note:  this is a partial file! -->
+<h1>This is a list view </h1>
+
+  <ul>
+    <li ng-repeat="item in itemArray track by $index">
+        {{item.name}}
+        {{item.age}}
+        <button ng-click="removeDog($index)">remove</button>
+   </li>
+</ul>

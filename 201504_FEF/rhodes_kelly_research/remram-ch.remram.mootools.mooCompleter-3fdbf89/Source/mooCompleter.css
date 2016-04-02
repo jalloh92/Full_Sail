@@ -1,0 +1,332 @@
+.shadow {
+	-moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.shadow-border {
+	-moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+}
+
+.rounded-corner-top {	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+}
+
+.rounded-corner-top-5 {	
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+}
+
+.rounded-corner {	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.rounded-corner-5 {	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+.rounded-corner-bottom {	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+}
+
+.rounded-corner-bottom-5 {	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+}
+/* DIVs Clear fixing */
+/* for Firefox, IE8, Opera, Safari, etc. */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* for IE7 */
+* + html .clearfix {
+    display: inline-block;
+}
+
+/* for IE6 */
+* html .clearfix {
+	height: 1%;
+}
+
+div.mc-content {
+	position: absolute;
+	width: 200px;
+	height: 20px;
+	margin-bottom: 1em;
+	padding: .5em;
+	text-shadow: 1px 1px 0px #fff;
+	display: block;	
+}
+
+div.mc-content-window {	
+	border: 1px solid #aaa;
+	background-color: #FAFAFA;
+	font-family: sans-serif;
+	font-size: .8em;
+	color: #555;
+	padding: .5em;
+	text-shadow: 1px 1px 0px #fff;		
+}
+
+div.mc-content-header {
+	float: right;
+	height: 32px;
+	width: 32px;
+	padding: .2em;
+	cursor: move;
+	background-image: url("./Images/move.png");
+	background-repeat: no-repeat;
+}
+
+div.mc-content-area {
+	position: relative;
+}
+
+div.mc-content-btn {
+	position: relative;
+	font-size: .8em;
+	font-weight: bold;
+	text-align: center;
+	background-color: #FAFAFA;
+	font-family: sans-serif;
+	color: #555;
+	cursor: pointer;
+}
+
+div.mc-content-btn:hover {
+	color: #0B55C4;
+	background-color: #E6E6E6;
+}
+
+div.mc-content-window ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;		
+}
+
+/**
+* Pagenation
+*/
+div.mc-content-pagenation {
+	height: 20px;
+	font-size: .8em;
+	background-color: transparent;
+	text-align: center !important;
+	margin: 0 auto;
+}
+
+div.mc-content-pagenation-navigation {	
+	width: 160px;
+	margin:0 auto;
+}
+
+div.mc-content-pagenation-navigation div {
+	float: left;
+	width: 70px;
+	margin-left: 8px;
+	background-color: #eee;
+	cursor: pointer;
+}
+
+div.mc-content-pagenation-navigation div:hover {
+	color: #0B55C4;
+}
+
+/**
+ * Auto-Completer styles
+ */
+div.mc-content-completer-div {
+	clear: both;
+	width: 98%;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	margin: .5em 0 .5em 0;
+	padding: .2em;
+}
+
+div.mc-content-auto-completer-list-area {
+	position: absolute;
+	max-height: 150px;
+	background-color: #f2f2f2;
+	border: 0;
+	border-right: 5px solid #555;
+	border-bottom: 5px solid #555;
+	border-left: 5px solid #555;
+	overflow: auto;
+	-moz-box-shadow: 8px 8px 5px 8px rgba(0, 0, 0, 0.4);
+  	-webkit-box-shadow: 8px 8px 5px 8px rgba(0, 0, 0, 0.4);
+  	box-shadow: 8px 8px 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+li.mc-content-auto-completer-li {
+	width: 98%;
+	max-width: 98%;
+	padding: .5em 0 .3em .5em;
+	border: 0;
+	border-bottom: 1px solid #aaa;
+	cursor: pointer;
+}
+
+li.mc-content-auto-completer-li:hover {
+	background-color: #e0f2f7;
+	color: #111;
+	font-style: italic;
+}
+
+li.mc-content-auto-completer-li-highlight {
+	background-color: #e0f2f7;
+	color: #111;	
+	font-style: italic;	
+}
+
+div.mc-content-completer-element-container-div {
+	clear: both;
+	width: 98%;
+	max-width: 98%;
+	overflow: auto;	
+}
+
+ul.mc-content-completer-element-container-ul li {
+	float: left;
+	margin: .5em .2em .5em .2em;
+}
+
+li.mc-content-completer-element-container-li div {
+	float: left;
+	height: 20px;
+	padding: .2em .2em 0 0;
+}
+
+div.mc-content-btn-close {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	color: #5882FA;
+	font-size: .8em;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+div.mc-content-btn-close:hover {
+	color: #FE2E2E;
+}
+
+div.mc-content-selected-element-value {
+	font-size: .8em;
+	font-weight: bold;
+}
+
+div.mc-content-completer-input-div {
+	clear: both;
+}
+
+input.mc-content-autocompleter-input {
+	width: 98%;
+	border: 0px;
+	border-bottom: 1px solid #888; 
+}
+
+ul.mc-content-auto-completer-ul li {
+	width: 99%;
+	float: left;
+}
+
+/**
+ * Button 
+ */
+div.mc-content-btn-add {
+	float: left;
+	width: 70px;
+	height: 15px;
+	max-height: 20px;
+	font-weight: bold;
+	border: 1px solid #aaa;
+	margin-bottom: .5em;
+	padding: .2em;
+	text-align: center;
+	cursor: pointer;
+	background-color: #FAFAFA;
+}
+
+div.mc-content-btn-add:hover {
+	color: #0B55C4;
+	background-color: #E6E6E6;
+}
+
+/**
+ * Label input area
+ */
+div.mc-content-label-div {
+	clear: both;
+	width: 99%;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	margin: .5em 0 .5em 0;
+}
+
+div.mc-content-label-div input {
+	border: 0;
+	width: 96%;
+	margin: .2em;
+	padding: .2em;
+	font-size: .9em;
+	background-color: transparent;
+}
+
+.overTxtLabel { color:#999; }
+
+/**
+ * Select option area
+ */
+div.mc-content-options-div {
+	width: 99%;
+	min-height: 90px;
+	border: 1px solid #aaa;
+	overflow: auto;
+	margin: 1em 0 .5em 0;
+	background-color: #d8d8d8;
+}
+
+
+div.mc-content-options-div ul,
+div.mc-content-options-div ul li {
+	clear: both;
+	cursor: pointer;
+	width: 99%;
+	padding: .2em 0 .2em 0;
+}
+
+div.mc-content-options-div ul li span {
+	padding: 0 .2em 0 .2em;
+}
+
+div.mc-content-options-div ul li:hover {
+	background-color: #bdbdbd;
+}
+
+div.mc-content-options-div ul li.selected {
+	background-color: #81BEF7;
+}
+
+div.mc-content-options-div ul li.selected:hover {
+	background-color: #6599c9;
+}

@@ -1,0 +1,19 @@
+<div id="details">
+
+	<h1>Cupcake Details</h1>
+
+	<div id="details_left">
+		<img src="img/cupcake.png" alt="cupcake"/>
+	</div><!-- closes details_left -->
+
+	<div id="details_right">
+		<strong>{{ cupcake.name }}</strong><br/>
+		Price: {{ cupcake.price }}<br/>
+		Cake Flavor: {{ cupcake.cake }}<br/>
+		Frosting Flavor: {{ cupcake.frosting }}<br/>
+		<button ng-click="edit()">Edit</button>
+		<button ng-click="delete()">Delete</button>
+	</div><!-- closes details_right -->
+
+
+</div><!-- closes details -->			

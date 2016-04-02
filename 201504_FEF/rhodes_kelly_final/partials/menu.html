@@ -1,0 +1,16 @@
+<div id="menu">
+
+	<h1>Current Menu</h1>
+
+	<div class="cupcake_item" ng-repeat="cupcake in cupcakeArray track by $index">
+
+		<div class="cupcake_item_left">
+			<strong>{{ cupcake.name }}</strong><br/>
+			Price: {{ cupcake.price }}
+		</div><!-- closes cupcake_item_left -->
+		
+		<div class="cupcake_item_right">	
+			<a class="button_like" href="#/details/{{$index}}">Details</a>	
+		</div><!-- closes cupcake_item_right -->	
+	</div><!-- closes cupcake_item -->
+</div><!-- closes menu -->	

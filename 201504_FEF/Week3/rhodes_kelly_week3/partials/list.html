@@ -1,0 +1,21 @@
+<div class="container">
+	<a class="button_like" href="#form">Add a song to your playlist!</a>
+</div>	
+
+<hr>
+
+
+<table>
+	<tr>
+		<th>Song</th>
+		<th>Artist</th>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="item in itemArray track by $index">
+		<td>{{ item.song }}</td>
+		<td>{{ item.artist }}</td>
+		<td class="no_border"><a class="button_like" href="#/edit/{{$index}}">Edit</a></td>
+		<td class="no_border"><button ng-click="removeItemAt($index)">Remove</button></td>		
+	</tr>
+<table>	

@@ -1,0 +1,66 @@
+body{
+	background-color: #f792de; /* pink */
+	font-family: helvetica, sans-serif;
+}
+
+header, h1{
+	margin: 10px;
+}
+
+h1{
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+}
+
+.pony_div{
+	border: 1px solid black;
+	width: 150px;
+	float: left;
+	padding: 20px;
+	margin: 10px;
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	-moz-box-shadow: 0 10px 6px -6px #777;
+	     box-shadow: 0 10px 6px -6px #777;
+}
+
+.pony_div h2{
+	text-align:center;
+	font-family: 'Architects Daughter', cursive;
+	font-size:20px;
+}
+
+button, .button_like{
+	padding:10px;
+	border:1px solid #5377a6; /* blue */
+	border-radius: 10px;
+	text-decoration: none;
+	background-color: #96f3d7; /* teal */
+	font-size: 12px;
+	color: black;
+}
+
+button:hover, .button_like:hover{
+	background-color: #5377a6; /* dark blue */
+	color: #e6eac7;
+	border-color: #96f3d7;
+}
+
+form{
+	background-color: #e6eac7;
+	width: 375px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+.form_left{
+	width: 75px;
+	dislay:inline-block;
+	float:left;
+
+}
+
+.form_right{
+	width:200px;
+
+}
+

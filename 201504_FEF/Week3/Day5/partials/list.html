@@ -1,0 +1,8 @@
+<h1>This is my list view</h1>
+
+		<ul>
+			<li ng-repeat="item in dataArray track by $index">
+				<a href="#/edit/{{$index}}">{{ item.name }} - Age: {{ item.age }}</a>
+				<button ng-click="removeItemAt($index)">x</button>
+			</li>
+		</ul>

@@ -1,0 +1,15 @@
+<h1>My Super Awesome Pony List!</h1>
+
+<div class="pony_div" style="background-color:{{ pony.color }};" ng-repeat="pony in ponyCorral track by $index">
+	
+	<h2>{{ pony.name }} </h2>
+	<img src = "{{ pony.image }}" alt="{{ pony.name }}"/>
+	Pony Kind: {{ pony.kind }} <br/>
+
+	<a class="button_like" href="#/edit/{{$index}}">Edit</a>
+	<button ng-click="removePony($index)">Remove</button>
+
+
+
+
+</div>

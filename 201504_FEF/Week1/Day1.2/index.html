@@ -1,0 +1,32 @@
+<!doctype html>  
+
+
+<html lang="en">
+	<head>
+
+		<title>Day 1.2</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		
+	</head>
+	
+	<body ng-app="mySecondFirstApp" ng-controller="controllerOne">
+		<form ng-submit="saveItem()">
+			Name:
+			<input type="text" ng-model="nameInput" /> <br />
+			{{ testVar }}<br />
+			<button ng-click="myFunction()">Go!</button>
+		</form>
+
+		<!-- loop over array on view side -->
+		<ul>
+			<!-- on node (not parent) that you want to repeat, use track by $index so duplicate items work -->
+			<li ng-repeat="item in itemArray track by $index">
+				{{ item }}
+				<a ng-click="removeItem($index)">[x]</a>
+			</li> 
+		</ul>
+	</body>	
+
+</html>

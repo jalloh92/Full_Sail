@@ -1,0 +1,27 @@
+<form ng-submit="onSave()">
+
+	<h1>Add a new cupcake!</h1>
+
+	<div class="form_row">
+		<p class="form_left">Cupcake Name:</p>
+		<input class="form_right" type="text" ng-model="cupcake.name"/><br/>
+	</div>	
+
+	<div class="form_row">
+		<p class="form_left">Cake Flavor:</p>
+		<input class="form_right" type="text" ng-model="cupcake.cake"/><br/>
+	</div>	
+	
+	<div class="form_row">
+		<p class="form_left">Frosting Flavor:</p>
+		<input class="form_right" type="text" ng-model="cupcake.frosting"/><br/>
+	</div>
+	
+	<div class="form_row">
+		<p class="form_left">Cupcake Price:</p>
+		<input class="form_right" type="text" ng-model="cupcake.price"/><br/>
+	</div>	
+
+	<button type="submit">Submit</button>
+
+</form>

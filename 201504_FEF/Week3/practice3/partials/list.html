@@ -1,0 +1,12 @@
+<h1>This is the list view</h1>
+
+<div ng-repeat="item in itemArray track by $index">
+
+	{{ $index }}
+	{{ item.field1 }}
+	{{ item.field2 }}
+
+	<a href="#/edit/{{$index}}">Edit</a>
+	<button ng-click="deleteItemAt($index)">Delete</button>
+
+</div>

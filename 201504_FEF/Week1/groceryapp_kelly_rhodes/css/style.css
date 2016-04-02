@@ -1,0 +1,95 @@
+/* Color Scheme */
+/* Cream:  #E1E6B9 */
+/* Green 1:  #C4A7D4 */
+/* Green 2:  #ABC8A4 */
+/* Green 3:  #375D3B */
+/* Green 4:  #183128 */
+
+body{
+	margin:0;
+	background-color: #375D3B;
+	color: #183128;
+	font-family: 'Roboto', sans-serif;
+}
+
+p{
+	margin:0;
+}
+
+#container{
+	margin: 0 auto;
+	width: 90%;
+	background-color: #E1E6B9;
+	padding: 30px;
+	height: 600px;
+}
+
+#banner{
+	background-image: url("../images/asparagus.jpg");
+	background-repeat: no-repeat;
+	width:100%;
+	height: 300px;
+}
+
+#logo_holder{
+	width:20%;
+	padding: 3%;
+	float:left;
+}
+
+#mission_statement{
+	float: right;
+	width: 65%;
+	padding: 3%;
+}
+
+h2{
+	color: #E1E6B9;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-shadow: 1px 1px #183128;
+}
+
+#form-list-row{
+	clear:both;
+	width:100%;
+	margin-top:30px;
+}
+
+#left{
+	width: 40%;
+	float:left;
+}
+
+form{
+	width: 100%;
+	border: 1px solid #375D3B;
+	padding: 2%;
+}
+
+#list{
+	float: right;
+	width: 50%;
+}
+
+
+.row-ish{
+	width:100%;
+	border: 1px solid #375D3B;
+	clear:both;
+	padding:1px;
+	height: 30px;
+
+}
+
+.cell-ish{
+	float:left;
+	width: 25%;
+	margin-top: 5px;
+	margin-left: 1px;
+}
+
+img{
+	max-width:100%;
+}
