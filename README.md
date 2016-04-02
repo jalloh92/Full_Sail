@@ -1,5 +1,5 @@
-# Private
-Repo for Full Sail Assignments
+# Full Sail Web Design and Development
+Prive repo for Full Sail Assignments
 
 ## [Web Programming Fundamentals](https://github.com/karhodes/private/tree/master/201409_WPF)
 * August 2014
