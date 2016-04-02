@@ -1,0 +1,126 @@
+// Clear floats: --------------------------------------------------------------------------
+@mixin clearfix{
+	&:after{
+		content	: "";
+		display	: table;
+		clear 	: both;
+	}
+} // mixin clearfix
+
+// Eliminate need for vendor prefix on border radius: -------------------------------------
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+} //mixin border-radius
+
+// Center a class within the browser or its parent element: --------------------------------
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+} // mixin vertical-align
+
+// Element styled as a button: -------------------------------------------------------------
+@mixin button($colour, $text_colour) {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  
+  text-align: center;
+  text-decoration: none; 
+  color: $text_colour;
+  font-weight: bold;
+  
+  background: $color;
+  border: solid 1px darken($colour, 20%); // use a color that's 20% darker than the background color
+  
+ 
+  &:hover {
+    text-decoration: none;
+    background: saturate($colour, 10%); // makes the background color 10% more saturated than the original color
+  } // :hover
+ 
+  &:active {
+    position: relative;
+    top: 1px; // moving top by 1px to create "push" effect
+    color: saturate($colour, 15%); // makes the background color 15% more saturated than the original color
+  } // :active
+} // mixin button
+
+// Font styling: ---------------------------------------------------------------------------
+@mixin font($font, $style: normal, $weight: normal) {
+    font-family: $font // Include fallback fonts?
+    font-style:  $style;
+    font-weight: $weight;
+} // mixin fonts
+
+
+// Media query set: ---------------------------------------------------------------------------
+$tablet-width: 768px; // ->need to move to variables
+$desktop-width: 1024px; // -->need to move to variables
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+} // closes tablet
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+} // closes desktop
+
+p { // -->need to move to typography, sample use of mixin
+  font-size: 16px;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+
+
+// Vendor prefix a CSS3 property: ---------------------------------------------------------
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+} // mixin vendor-prefix
+
+
+// -----------------------------------------------------------------------
+// Ignore!  Things for Kelly to follow up on / look up :)
+// look at sass gradient mixin
+// brandon showed a mixin with an if statement to change white / black of text shadow based on background color
+
+// can use for loops with columns
+
+$columns: 4;
+@for $i from 1 through $columns{ // "through" includes 4th number, "to" does not inlcude 4th number -- easier on team 
+	.cols-#{$i} {
+	width: ((100 / $columns) * $i) * 1%;
+	}
+
+}
+
+// use for ie7 fixes
+// look at bourbon neat for grids!
+
+// Good References -------------------------------------------------------------
+// https://cooltrainer.org/getting-social-with-jekyll/
+// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+// https://css-tricks.com/conditional-media-query-mixins/
+// http://responsivedesign.is/develop/getting-started-with-sass
+// http://blog.grayghostvisuals.com/sass/sass-media-query-mixin/

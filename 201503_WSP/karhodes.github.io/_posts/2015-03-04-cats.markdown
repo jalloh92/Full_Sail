@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Cats"
+date:   2015-03-04 14:21:30
+categories: jekyll update
+tags: cat
+---
+
+This post is only about cats.

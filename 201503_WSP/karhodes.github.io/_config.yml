@@ -1,0 +1,17 @@
+# Site settings
+title: RhodesCodes
+email: krhodes26.2@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Hi!  I'm Kelly, an ex-weapons engineer / project manager turned web developer.  I graduate from Full Sail in the summer of 2016.  This site will be ever changing as my knowledge of the industry grows.  Thanks for stopping by!
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "rhodescodes.net" # the base hostname & protocol for your site
+twitter_username: rhodescodes
+github_username:  karhodes
+
+# Build settings
+markdown: kramdown
+
+
+# Terminal commands
+# to run Sass:
+# sass --watch _sass:css
