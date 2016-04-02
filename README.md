@@ -33,8 +33,8 @@ Repo for Full Sail Assignments
 * May 2015
 * Object-Orientated Programming using Python
 
-## [Server Side Languages](https://github.com/karhodes/private/tree/master/201505_SSL)
-* May 2015
+## [Server Side Languages](https://github.com/karhodes/private/tree/master/201506_SSL)
+* June 2015
 * Introduction to PHP
 
 ## [Advanced Server Side Languages](https://github.com/karhodes/private/tree/master/201509_ASL)
