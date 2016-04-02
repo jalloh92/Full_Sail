@@ -1,0 +1,12 @@
+body {
+  padding-top: 150px;
+  padding-bottom: 40px;
+  background-image: url("../images/retina_wood.png");
+  margin:0;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+

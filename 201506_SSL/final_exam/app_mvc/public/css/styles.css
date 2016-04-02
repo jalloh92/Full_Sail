@@ -1,0 +1,34 @@
+body {
+  padding-bottom: 40px;
+  background-image: url("../images/retina_wood.png");
+  margin:0;
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 40px;
+}
+
+img {
+	max-width: 200px;
+}
+
+.form{
+	margin-bottom: 40px;
+}
+
+td {
+	text-align: left;
+}
+
+.jumbotron{
+	background-image: url("../images/1950office.jpg");
+	max-width: 100%;
+	color: #0E4975;
+	text-shadow: 1px 1px #ffffff;
+}

@@ -1,0 +1,94 @@
+* { 
+	box-sizing: border-box;
+}
+
+html {
+    background:#505D6E url(../images/body2.jpg) no-repeat center center fixed;
+    min-height:100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.25em;
+}
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+	width: 500px;
+	margin: 0 auto;
+}
+
+form div {
+	float: left;
+	margin-top: 10px;
+}
+label, input {
+	float: left;
+	clear: both;
+}
+input {	
+	padding: 8px;
+	margin: 5px;
+	border: 1px solid rgb(133,133,133);
+	font-size: 0.95em;
+}
+label {	
+	padding: 0;
+	margin: 0 5px;
+}
+.half {
+	width: 50%;
+}
+.half input, .half label {
+	width: 240px;	
+}
+.third {
+	width: 33.3%;
+}
+.third input, .third label {
+	width: 156.666666667px;
+}
+.full {
+	width: 100%;
+	clear: both;
+}
+.full input, .full label {
+	width: 490px;
+}
+.submit {
+	position: relative;	
+	clear: both;
+}
+.submit button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 140px;
+	border-radius: 0;
+	background: rgb(25,195,25);
+	border: 1px solid rgb(175,175,175);
+	padding: 8px;
+	color: #fff;
+	font-size: 1em;
+}
+.key {
+	display: inline-block;
+	width: 60px;
+	font-weight: bold;
+	text-align: right;
+}

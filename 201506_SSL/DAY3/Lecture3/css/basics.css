@@ -1,0 +1,22 @@
+body{
+    text-align:left;
+    align-content: center;
+    background:#B9D76B;
+    color:black;
+    font: 18px "Lucida Sans Unicode";
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1   {color:darkgreen; text-align: center;}
+
+h2   {color:darkblue; text-align: center;}
+
+h3   {color:purple; text-align: center;}
+
+
+
