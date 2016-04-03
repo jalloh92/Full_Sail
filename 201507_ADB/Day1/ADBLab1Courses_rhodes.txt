@@ -1,0 +1,30 @@
+db.courses.save({_id:7575, name:”English Composition”, abbreviation:”eng”, creditHours: 3, degree:”Literature”, primaryTeacher:”Holly Hammond“ })
+
+db.courses.save({_id:7576, name:Intro to Art History, abbreviation:iah, creditHours: 4, degree:Art History, primaryTeacher:Gabi Light })
+
+db.courses.save({ _id:7577, name:Differential Equations, abbreviation:deq, creditHours: 3, degree:Mathematics, primaryTeacher:Steven Trujillo})
+
+db.courses.save({ _id:7578, name:Calculus II, abbreviation:cl2, creditHours: 4, degree:Mathematics, primaryTeacher:Sarah Leming})
+
+db.courses.save({ _id:7579, name:Intro to Accounting, abbreviation:ita, creditHours: 4, degree:Finance, primaryTeacher:Catherine Rhodes })
+
+db.courses.find({primaryTeacher:’Hal Yu’, creditHours:3 }).count()
+
+db.courses.find({creditHours: {$gte: 4} })
+db.courses.find({ $or: [{primaryTeacher:’James Paterson’}, {name:’Fluids’}] })
+
+Db.users.find( { $or: [ { age: 23 }, { name: 'John Doe'} ] } )
+
+db.users.find({abbreviation: {$gte:”e”,$lte:”ez"}})
+
+db.courses.find({creditHours: {$type:2}}) 
+
+x= db.courses.findOne({name: 'Vector Analysis'})
+
+x.creditHours = 3
+
+db.users.save(x)
+
+db.courses.remove({abbreviation:’cda'}) 
+
+

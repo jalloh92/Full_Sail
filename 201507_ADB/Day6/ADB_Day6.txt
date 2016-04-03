@@ -1,0 +1,64 @@
+ADB Day 6
+MongoDB Replication
+
+1. Download the  OS X version of MongoDB.
+
+2. Rename folder to “mongoDB” and move to desktop.
+
+3. Create 3 directories:
+     /Users/kellyrhodes/Desktop/mongodb/rs1
+     /Users/kellyrhodes/Desktop/mongodb/rs2
+     /Users/kellyrhodes/Desktop/mongodb/rs3
+
+     From / run   sudo chmod -R 777 /data
+
+4. From the bin directory run:
+
+./mongod --replSet m101 --logpath "1.log" --dbpath /Users/kellyrhodes/Desktop/mongodb/rs1 --port 27017 --smallfiles --fork
+
+./mongod --replSet m101 --logpath "2.log" --dbpath /Users/kellyrhodes/Desktop/mongodb/rs2 --port 27020 --smallfiles --fork
+
+./mongod --replSet m101 --logpath "3.log" --dbpath /Users/kellyrhodes/Desktop/mongodb/rs3 --port 27021 --smallfiles --fork
+
+5. Check Activity Monitor. You should have 3 mongos processes.
+Check the /data/… directories
+
+6. Configure the replica set.
+
+config = { _id: "m101", members:[
+{ _id : 0, host : "localhost:27017"},
+{ _id : 1, host : "localhost:27020"},
+{ _id : 2, host : "localhost:27021"} ]
+};
+
+rs.initiate(config);
+rs.status();
+
+
+7. Connect to the secondaries.
+Open 2 more windows from the bin directory.
+
+./mongo --port 27020
+./mongo --port 27021
+
+Secondaries cannot make writes.
+
+8. From the primary:
+use test
+db.users.insert({_id:1,name:'Peter Parker'})
+
+9. From secondary:
+rs.slaveOk()
+db.users.find()
+
+10 Now let’s import data.
+Create a directory under bin called import.
+Copy the places.js file to the import directory.
+
+./mongoimport -d test -c places --file import/places.js
+
+
+From all 3 databases:
+show collections
+db.places.find()
+

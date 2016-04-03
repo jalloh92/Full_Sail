@@ -1,0 +1,77 @@
+******* Question 1: ************
+db.vehicle.save({_id:'TT', name:'TT', manufacturer:'Audi', type: 'auto', features:['cdPlayer','powerWindows','powerSteering']})
+db.vehicle.save({_id:'MX6', name:'MX6', manufacturer:'Mazda', type: 'auto', features:['AC','navigation']})
+db.vehicle.save({_id:'Miata', name:'Miata', manufacturer:'Mazda', type: 'auto', features:['convertible']})
+db.vehicle.save({_id:'Focus', name:'Focus', manufacturer:'Ford', type: 'auto', features:['sunroof','powerLocks','leather']})
+db.vehicle.save({_id:'Explorer', name:'Explorer', manufacturer:'Ford', type: 'auto', features:['4WheelDrive','automatic']})
+db.vehicle.save({_id:'Fiesta', name:'Fiesta', manufacturer:'Ford', type: 'auto', features:['tapeDeck']})
+
+******* Question 2: ************
+var x = {}
+db.vehicle.save(x)
+
+{_id:'Heritage', name:'Heritage', manufacturer:'Harley-Davidson', type: 'motorcyle'}
+{_id:'RoadKing', name:'RoadKing', manufacturer:'Harley-Davidson', type: 'motorcyle'}
+{_id:'BadBoy', name:'BadBoy', manufacturer:'Harley-Davidson', type: 'motorcyle'}
+{_id:'K1600GTL', name:'K1600GTL', manufacturer:'BMW', type: 'motorcyle'}
+{_id:'K1200GT', name:'K1200GT', manufacturer:'BMW', type: 'motorcyle'}
+{_id:'Diavel', name:'Diavel', manufacturer:'Ducati', type: 'motorcyle'}
+
+******* Question 3: ************
+db.vehicle.ensureIndex({ name : 1 })
+db.vehicle.getIndexKeys()
+
+******* Question 4: ************
+db.vehicle.find({name:'TT'})
+
+******* Question 5: ************
+db.vehicle.find({	$and:[
+							{type:'motorcyle'},
+							{$or:	[
+									{manufacturer:'BMW'},
+									{manufacturer:'Ducati'}
+									]
+							}
+						]
+				})
+
+******* Question 6: ************
+db.vehicle.update({ name: 'TT' },{ $set: { 'mpg': 32 } })
+db.vehicle.update({ name: 'MX6' },{ $set: { 'mpg': 28 } })
+db.vehicle.update({ name: 'Miata' },{ $set: { 'mpg': 37 } })
+db.vehicle.update({ name: 'Focus' },{ $set: { 'mpg': 42 } })
+db.vehicle.update({ name: 'Explorer' },{ $set: { 'mpg': 23 } })
+db.vehicle.update({ name: 'Fiesta' },{ $set: { 'mpg': 25 } })
+db.vehicle.update({ name: 'Heritage' },{ $set: { 'mpg': 61 } })
+db.vehicle.update({ name: 'RoadKing' },{ $set: { 'mpg': 67 } })
+
+******* Question 7: ************
+db.vehicle.update({name:'TT'},{$push:{features:'hoverCapable'}})
+
+******* Question 8: ************
+db.vehicle.find().sort({mpg:-1}).skip(2).limit(1)
+
+******* Question 9: ************
+db.vehicle.group({
+cond: {$and:[{mpg: { $exists: true }},{type:'auto'}]}, 
+key: {type: true}, 
+initial: {totalMpg: 0, count: 0}, 
+reduce: function(obj,prev){ 
+	prev.totalMpg += obj.mpg; 
+	prev.count++; }, 
+finalize: function(out){ out.avgMpg = out.totalMpg / out.count; } }) 
+
+******* Question 10: ************
+db.runCommand( { count: 'vehicle' } )
+
+******* Question 11: ************
+db.vehicle.remove( { type : "motorcyle" } )
+
+******* Question 12: ************
+mongoexport -u adbOwner -p adb -d adbfp -c vehicle --csv --out /media/sf_VBShare/vehicle.csv --fields _id,name,manufacturer,type,features
+
+
+
+
+
+

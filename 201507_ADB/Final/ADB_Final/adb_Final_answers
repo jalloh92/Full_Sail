@@ -1,0 +1,183 @@
+******* Question 2: ************
+mongoimport -u adbOwner -p adb -d adb -c inventory -file /media/sf_VBShare/finalData.js
+
+******* Question 3: ************
+var x = {
+	_id:'Faro', 
+	name:'Faro', 
+	type:'vendor', 
+	address: '4092 Eastgate Drive', 
+	city: 'Orlando',
+	state: 'FL',
+	ll:[-79.441833, 44.012893],
+	phone:[
+		{type:'main', number:'407-123-4567'},
+		{type:'fax',number:'407-123-1468'}
+	]
+}
+
+db.inventory.save(x)
+
+var x = {
+	_id:'AAA', 
+	name:'AAA', 
+	type:'vendor', 
+	address: '451 E Altamonte Dr', 
+	city: 'Altamonte Springs',
+	state: 'FL',
+	ll:[-81.375883, 28.667207],
+	phone:[
+		{type:'main', number:'407-123-4569'},
+		{type:'fax',number:'407-123-1470'}
+	]
+}
+
+db.inventory.save(x)
+
+******* Question 4: ************
+_id: PRODUCT NAME (No Spaces)
+name: PRODUCT NAME
+type: “product”
+	vendor: VENDOR  NAME
+	category: CATEGORY   (string - Electronic, TV, Clothing, Health, Furniture…)
+	features []
+
+
+db.inventory.save({
+	_id:'EDGE', 
+	name:'EDGE',
+	type:'product', 
+	vendor:'Faro', 
+	category: 'metrology',
+	features:['touchScreen','9ft','7axis']
+})
+
+db.inventory.save({
+	_id:'GAGE', 
+	name:'GAGE',
+	type:'product', 
+	vendor:'Faro', 
+	category: 'metrology',
+	features:['4ft','6axis']
+})
+
+db.inventory.save({
+	_id:'FUSION', 
+	name:'FUSION',
+	type:'product', 
+	vendor:'Faro', 
+	category: 'metrology',
+	features:['kinematicProbe']
+})
+
+db.inventory.save({
+	_id:'PRIME', 
+	name:'PRIME',
+	type:'product', 
+	vendor:'Faro', 
+	category: 'metrology',
+	features:[''6'ft','7axis']
+})
+
+db.inventory.save({
+	_id:'TripTik', 
+	name:'TripTik',
+	type:'product', 
+	vendor:'AAA', 
+	category: 'map',
+	features:['directions','coupons']
+})
+
+db.inventory.save({
+	_id:'cruise', 
+	name:'cruise',
+	type:'product', 
+	vendor:'AAA', 
+	category: 'travel',
+	features:['7nights','pool']
+})
+
+db.inventory.save({
+	_id:'insurance', 
+	name:'insurance',
+	type:'product', 
+	vendor:'AAA', 
+	category: 'insurance',
+	features:['deductible']
+})
+
+******* Question 5: ************
+db.inventory.ensureIndex({ name : 1 })
+db.inventory.getIndexKeys()
+
+******* Question 6: ************
+db.inventory.createIndex( { 'phone.number': -1 } )
+db.inventory.getIndexKeys()
+
+******* Question 7: ************
+db.inventory.find({vendor:'Faro'}).limit(1)
+
+******* Question 8: ************
+db.inventory.find({vendor : {$in:['Faro', 'AAA']} } )
+
+******* Question 9: ************
+db.inventory.find({$and:[{type:'vendor'},{'phone.number':'407-123-1470'}]})
+
+******* Question 10: ************
+db.inventory.update( {_id:'Battleship'}, {$set: {'rating':1}} )
+db.inventory.update( {_id:'PS3'}, {$set: {'rating':2}} )
+db.inventory.update( {_id:'Power_Glove'}, {$set: {'rating':3}} )
+db.inventory.update( {_id:'BigMac'}, {$set: {'rating':4}} )
+db.inventory.update( {_id:'ZPumpFusion'}, {$set: {'rating':5}} )
+db.inventory.update( {_id:'cruise'}, {$set: {'rating':6}} )
+db.inventory.update( {_id:'GAGE'}, {$set: {'rating':7}} )
+db.inventory.update( {_id:'FUSION'}, {$set: {'rating':8}} )
+
+******* Question 11: ************
+db.inventory.update({name:'EDGE'},{$push:{features:'EMP Resistant'}})
+
+******* Question 12: ************
+db.inventory.ensureIndex({ll:'2d'})
+
+******* Question 13: ************
+db.inventory.find({ll:{$near:[-81.30151, 28.59716]}}).limit(1)
+
+******* Question 14: ************
+db.runCommand( { count: 'inventory' } )
+
+******* Question 15: ************
+db.inventory.find().sort({rating:-1}).skip(1).limit(1)
+
+******* Question 16: ************
+db.inventory.group({
+cond: {$and:[{rating: { $exists: true }},{type:'product'}]}, 
+key: {type: true}, 
+initial: {totalRating: 0, count: 0}, 
+reduce: function(obj,prev){ 
+	prev.totalRating += obj.rating; 
+	prev.count++; }, 
+finalize: function(out){ out.avgRating = out.totalRating / out.count; } }) 
+
+******* Question 17: ************
+db.inventory.find({$and:[{type:'vendor'},{name:'Mattel'}]})
+
+******* Question 18: ************
+db.inventory.remove( { '_id' : 'ZpumpFusion' } )
+
+******* Question 19: ************
+db.inventory.find({'type':'product'}).count()
+
+******* Question 20: ************
+db.inventory.remove( { 'vendor' : 'Mattel' } )
+
+
+
+
+******* Question 21: ************
+mongoexport -u adbOwner -p adb -d adb -c inventory --csv --out /media/sf_VBShare/inventory.csv --fields _id,name,type,vendor,category,address,city,state
+
+
+
+
+
+

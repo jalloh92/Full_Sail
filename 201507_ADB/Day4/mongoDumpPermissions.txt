@@ -1,0 +1,14 @@
+mongo admin -u 'adbmongo' -p 'adb’
+
+use adb
+
+db.grantRolesToUser("adbOwner",[{ role: "readWriteAnyDatabase", db: "admin" }])
+
+db.grantRolesToUser("adbOwner",[{ role: "dbAdminAnyDatabase", db: "admin" }])
+
+db.grantRolesToUser("adbOwner",[{ role: "restore", db: "admin" }])
+
+db.grantRolesToUser("adbOwner",[{ role: "userAdminAnyDatabase", db: "admin" }])
+
+From OS Terminal:
+ mongodump -u adbOwner -p adb -d adb -o /home/adbadmin

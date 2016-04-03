@@ -1,0 +1,48 @@
+Day 2 
+
+
+db.users.group({
+cond: {age: { $exists: true }}, 
+key: {type: true}, 
+initial: {totalAge: 0, count: 0}, 
+reduce: function(obj,prev){ 
+	prev.totalAge += obj.age; 
+	prev.count++; }, 
+finalize: function(out){ out.avgAge = out.totalAge / out.count; } }) 
+
+
+x = {type:'user',
+	name: 'Mark Zuckerburg', 
+	age:28,
+	favNum:[1,3,5,7,11]
+}
+
+
+x = {type:'admin',
+	name:'Ben Forta', 
+	age:58,
+	children:[
+		{name:'Sally',age:4},
+		{name:'Jimmy',age:12}
+	]
+}
+
+
+x = {_id:1,
+	type:'user',
+	name:'John Winchester', 
+	age:46,
+	children:[
+		{name:'Sam',age:14, favMovies:['Star Wars', 'Armageddon', 'Total Recall']},
+		{name:'Dean',age:16, favMovies:['Robocop', 'X-Men']},
+		{name:'Frank',age:18, favMovies:['Iron Man', 'V for Vendetta']}
+	]
+}
+
+
+db.users.insert({_id:0, desc: 'Prime Numbers’, prime:[2,3,5,7,11,13,17,19]});
+
+db.users.insert({_id:2, desc: 'Even Numbers', prime:[2,4,6,8,10]});
+
+db.users.insert({_id:3, desc: 'Odd Numbers', prime:[1,3,5,7,9]});
+

@@ -1,0 +1,21 @@
+_id,name,type,vendor,category,address,city,state
+"AAA","AAA","vendor",,,"451 E Altamonte Dr","Altamonte Springs","FL"
+"BigMac","Big Mac","product","McDonalds","fast food",,,
+"ChickenNugget","Chicken Nugget","product","McDonalds","fast food",,,
+"EDGE","EDGE","product","Faro","metrology",,,
+"FUSION","FUSION","product","Faro","metrology",,,
+"Faro","Faro","vendor",,,"4092 Eastgate Drive","Orlando","FL"
+"GAGE","GAGE","product","Faro","metrology",,,
+"Mattel","Mattel","vendor",,,"763 Runies Ct","El Segundo","CA"
+"McDonalds","McDonalds","vendor",,,"2111 McDonald's Dr","Oak Brook","IL"
+"Nintendo","Nintendo","vendor",,,"763 Runies Ct","Redmond","WA"
+"PRIME","PRIME","product","Faro","metrology",,,
+"PS3","PS3","product","Sony","electronics",,,
+"Power_Glove","Power Glove","product","Nintendo","electronics",,,
+"Reebok","Reebok","vendor",,,"1895 J.W. Foster Boulevard","Canton","mA"
+"Sony","Sony","vendor",,,"3213 Tech Way","Los Angeles","CA"
+"TripTik","TripTik","product","AAA","map",,,
+"Vaio","Vaio","product","Sony","electronics",,,
+"Wii","Wii","product","Nintendo","electronics",,,
+"cruise","cruise","product","AAA","travel",,,
+"insurance","insurance","product","AAA","insurance",,,

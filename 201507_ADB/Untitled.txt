@@ -1,0 +1,29 @@
+db.grades.group({
+cond: {studentId: 506689223 }, 
+initial: {totalGrade: 0, count: 0}, 
+reduce: function(obj,prev){ 
+	prev.totalGrade += obj.grade; 
+	prev.count++; }, 
+finalize: function(out){ out.avgGrade = out.totalGrade / out.count; } }) 
+
+
+db.users.update({name:’Joe Panton’},{ $set:{‘permissions’:[‘read’,’write’]} })
+
+db.courses.update({“prerequisite” :{$exists: true}},{$unset:{"prerequisite":1}},false,true);
+
+db.grades.createIndex( { grade: -1 } )
+
+db.users.update({name:”Joe Panton”},{$push:{permissions:”delete”}})
+
+
+db.courses.group({
+cond: {institute: ‘Full Sail’, creditHours:{$type:1} }, 
+initial: {totalCreditHr: 0, count: 0}, 
+reduce: function(obj,prev){ 
+	prev.totalCreditHr += obj.creditHours; 
+	prev.count++; }, 
+finalize: function(out){ out.avgCreditHr = out.totalCreditHr / out.count; } }) 
+
+
+db.courses.update({},{$set:{‘status’:’active’}},{multi:true})
+
