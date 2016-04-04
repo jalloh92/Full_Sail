@@ -1,0 +1,21 @@
+body {
+  padding-bottom: 40px;
+  background-image: url("../images/retina_wood.png");
+  margin:0;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 40px;
+}
+
+img {
+	max-width: 200px;
+}
+
+.form{
+	margin-bottom: 40px;
+}
+
+

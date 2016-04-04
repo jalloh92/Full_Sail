@@ -41,10 +41,18 @@ Prive repo for Full Sail Assignments
 * June 2015
 * Introduction to PHP
 
+## [Advanced Databases](https://github.com/karhodes/private/tree/master/201507_ADB)
+* July 2015
+* Introduction to relational databases (Mongo)
+
 ## [Advanced Server Side Languages](https://github.com/karhodes/private/tree/master/201509_ASL)
 * August 2015
 * CakePHP project for development bill of materials
 * [FieldFinder](https://github.com/jdcarroll/fieldfinder) was a MEAN stack application done as a group project
+
+## [Advanced Web Topics](https://github.com/karhodes/private/tree/master/201511_AWT)
+* November 2015
+* Capstone project was an RFID-enabled kitty kibble dispenser using an Arduino board
 
 ## [Mobile Device Deployment](https://github.com/karhodes/private/tree/master/2016_MDD)
 * February 2016
